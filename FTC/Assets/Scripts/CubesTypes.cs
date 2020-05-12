@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class CubesTypes : MonoBehaviour
 {
+    [Header("Common")]
+    public CubesTypes Ct;
 
     [Header("Pillar")]
     public bool isStep = false;
@@ -14,7 +16,7 @@ public class CubesTypes : MonoBehaviour
     public Transform player;
     public Vector3 pos;
     public bool isTeleport = false;
-    public CubesTypes Ct;
+    public CubesTypes CtTelepot;
 
     [Header("End Cube")]
     public string levelName;
@@ -37,12 +39,12 @@ public class CubesTypes : MonoBehaviour
 
         if (other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
         {
-            if (isTeleport || !Ct.isTeleport)
+            if (isTeleport || !CtTelepot.isTeleport)
             {
                 StartCoroutine(Teleport());
             }
 
-            Ct.isTeleport = !Ct.isTeleport;
+            CtTelepot.isTeleport = !CtTelepot.isTeleport;
             isTeleport = !isTeleport;
         }
         else if(other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
