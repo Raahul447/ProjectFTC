@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_MinSize: {x: 583, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 1
-  controlID: 2606
+  controlID: 135
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 583, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 2607
+  controlID: 136
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 2608
+  controlID: 71
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 2609
+  controlID: 72
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -410,9 +410,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a500000
-      m_LastClickedID: 20602
-      m_ExpandedIDs: 4ec1feff10c2feffcac2feff94c3feffa8c4feffa2c5feff98c6feff6ec7feff58c8feffe0f3feffbef4feff2269ffff888cffff688dffffd0f5ffff6afbffff48350000de440000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -505,11 +505,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.2332594, y: -0.26937646, z: 0.06714771, w: 0.93226045}
     speed: 2
-    m_Value: {x: 0.23308942, y: -0.2706944, z: 0.06747755, w: 0.9315796}
+    m_Value: {x: -0.23325938, y: 0.26937646, z: -0.06714771, w: -0.93226045}
   m_Size:
     m_Target: 54.41701
     speed: 2
-    m_Value: 52.073696
+    m_Value: 54.41701
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -141513,19 +141513,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\yr020\Desktop\FlipTheCube\FTC
+  m_LastProjectPath: C:\Users\yr020\Desktop\Unity Projects\Personal\FTC(Github)\ProjectFTC\FTC
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 63}
-    m_SelectedIDs: a02e0000
-    m_LastClickedID: 11936
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: ea2d0000
+    m_LastClickedID: 11754
     m_ExpandedIDs: 00000000ea2d0000902e0000a02e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -141554,7 +141554,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ea2d0000902e0000a02e000000ca9a3b
+    m_ExpandedIDs: 00000000ea2d0000902e0000a02e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -141581,7 +141581,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a2420000be3f000014440000b6460000e63e000044430000ce5800005e5a0000a44000005840000072400000ca330000ee34000064620000f4690000f4420000d24a0000263b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
