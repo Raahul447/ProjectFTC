@@ -74,14 +74,16 @@
     <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\Movement_2.cs" />
     <Compile Include="Assets\Scripts\Pillar.cs" />
     <Compile Include="Assets\Scripts\Random.cs" />
     <Compile Include="Assets\Scripts\SwipeManager.cs" />
-    <None Include="Assets\Art\Shader\GradientBackground.shader" />
-    <None Include="Assets\Art\Shader\FogShader.shader" />
+    <Compile Include="Assets\Scripts\Tutorial.cs" />
+    <Compile Include="Assets\Scripts\TutorialMovement.cs" />
+    <Compile Include="Assets\Scripts\UI.cs" />
+    <None Include="Assets\Shader\GradientBackground.shader" />
+    <None Include="Assets\Shader\FogShader.shader" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
-    <None Include="Assets\Art\Shader\CubeShader.shader" />
+    <None Include="Assets\Shader\CubeShader.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
