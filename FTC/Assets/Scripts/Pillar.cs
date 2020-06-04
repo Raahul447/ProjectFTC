@@ -6,7 +6,9 @@ using UnityEngine;
 public class Pillar : MonoBehaviour
 {
     public CubesTypes CT;
+    public GameObject platform;
     public float y, time;
+    public bool isX = false, isY = false, isZ = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,19 @@ public class Pillar : MonoBehaviour
     {
         if (CT.isStep)
         {
-            transform.DOMoveY(y, time);
+
+            if (isX)
+            {
+                transform.DOMoveX(y, time);
+            }
+            else if (isZ)
+            {
+                transform.DOMoveZ(y, time);
+            }
+            else if (isY)
+            {
+                transform.DOMoveY(y, time);
+            }
         }
     }
 }

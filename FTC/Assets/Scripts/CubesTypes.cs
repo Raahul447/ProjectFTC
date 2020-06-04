@@ -18,6 +18,7 @@ public class CubesTypes : MonoBehaviour
     public bool isTeleport = false;
     public CubesTypes CtTelepot;
 
+
     [Header("End Cube")]
     public string levelName;
 
@@ -37,15 +38,13 @@ public class CubesTypes : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
+        if(other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
         {
-            if (isTeleport || !CtTelepot.isTeleport)
+            if (!isTeleport)
             {
+                Ct.isTeleport = false;
                 StartCoroutine(Teleport());
             }
-
-            CtTelepot.isTeleport = !CtTelepot.isTeleport;
-            isTeleport = !isTeleport;
         }
         else if(other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
         {
@@ -59,9 +58,9 @@ public class CubesTypes : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
         {
-
+            isTeleport = !isTeleport;
         }
     }
 
