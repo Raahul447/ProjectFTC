@@ -8,7 +8,9 @@ public class Pillar : MonoBehaviour
     public CubesTypes CT;
     public GameObject platform;
     public float y, time;
-    public bool isX = false, isY = false, isZ = false;
+    public bool isX = false, isY = false, isZ = false, isAll = false;
+    public float X, Y, Z;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,10 @@ public class Pillar : MonoBehaviour
             else if (isY)
             {
                 transform.DOMoveY(y, time);
+            }
+            else if (isAll)
+            {
+                transform.DOMove(new Vector3(X,Y,Z), time);
             }
         }
     }
