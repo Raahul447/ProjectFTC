@@ -942,6 +942,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3083836571037491772, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: lerpSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322c1995bb160d2419156841121693e8, type: 3}
 --- !u!1 &642819195
@@ -2660,6 +2665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndCubeMain
       objectReference: {fileID: 0}
+    - target: {fileID: 1693238446, guid: d1ad02b23ff1ca941b3afb1717f7fe5a, type: 3}
+      propertyPath: levelName
+      value: Level_3
+      objectReference: {fileID: 0}
     - target: {fileID: 8598859597438525314, guid: d1ad02b23ff1ca941b3afb1717f7fe5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2715,10 +2724,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1693238446, guid: d1ad02b23ff1ca941b3afb1717f7fe5a, type: 3}
-      propertyPath: levelName
-      value: Level_3
-      objectReference: {fileID: 0}
+    - target: {fileID: 8598859597438525316, guid: d1ad02b23ff1ca941b3afb1717f7fe5a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 741cdf360ac06ab449c41836bf72ca58, type: 2}
     - target: {fileID: 885253872, guid: d1ad02b23ff1ca941b3afb1717f7fe5a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -2731,11 +2741,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7
       objectReference: {fileID: 0}
-    - target: {fileID: 8598859597438525316, guid: d1ad02b23ff1ca941b3afb1717f7fe5a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 741cdf360ac06ab449c41836bf72ca58, type: 2}
     - target: {fileID: 99416132, guid: d1ad02b23ff1ca941b3afb1717f7fe5a, type: 3}
       propertyPath: levelName
       value: Level_3

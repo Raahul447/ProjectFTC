@@ -96,7 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e484762110d086542b836ea8b1bfdc79,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -3587,6 +3588,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShowToolkit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004929866767703278, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044,
+        type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004929866767703278, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044,
+        type: 3}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004929866767703278, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044, type: 3}

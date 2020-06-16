@@ -62,40 +62,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\BloomModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\FogModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\GrainModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PostProcessingFactory.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PostProcessingInspector.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PostProcessingModelEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PostProcessingMonitor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Utils\CurveEditor.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Utils\EditorResources.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Utils\FxStyles.cs" />
-    <Compile Include="Assets\SineVFX\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Behaviors\Cursors\CursorManagerEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Behaviors\TransformerEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Debugging\PointerDebuggerWindow.cs" />
+    <Compile Include="Assets\TouchScript\Editor\EditorResources.cs" />
+    <Compile Include="Assets\TouchScript\Editor\EditorUI\GUIElements.cs" />
+    <Compile Include="Assets\TouchScript\Editor\EditorUI\GUIUtils.cs" />
+    <Compile Include="Assets\TouchScript\Editor\EditorUI\PagedList.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\FlickGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\GestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\LongPressGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\MetaGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\PressGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\ReleaseGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TapGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TransformGestures\Base\OnePointTransformGestureBaseEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TransformGestures\Base\TransformGestureBaseEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TransformGestures\Base\TwoPointTransformGestureBaseEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TransformGestures\PinnedTransformGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TransformGestures\ScreenTransformGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Gestures\TransformGestures\TransformGestureEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\InputSources\InputSourceEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\InputSources\StandardInputEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Layers\FullscreenLayerEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Layers\StandardLayerEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\TouchManagerEditor.cs" />
+    <Compile Include="Assets\TouchScript\Editor\TouchScriptSettingsWindow.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Utils\PropertyDrawers\NullToggleDrawer.cs" />
+    <Compile Include="Assets\TouchScript\Editor\Utils\PropertyDrawers\ToggleLeftDrawer.cs" />
+    <Compile Include="Assets\TouchScript\Modules\TUIO\Editor\InputSources\TuioInputEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -332,6 +327,12 @@
     </Reference>
     <Reference Include="DOTweenEditor">
       <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="OSCsharp">
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Assets/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="TUIOsharp">
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Assets/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
