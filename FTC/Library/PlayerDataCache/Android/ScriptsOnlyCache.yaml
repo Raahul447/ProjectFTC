@@ -4,8 +4,8 @@ ScriptsOnlyBuild:
     - CubesTypes
     - DeathZone
     - MainMenu
-    - MenuCube
     - Movement
+    - StopMove
     - SwipeManager
     - Tutorial
     - TutorialMovement
@@ -108,13 +108,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10200}
     - Class: 114
+      Script: {instanceID: 10420}
+    - Class: 114
       Script: {instanceID: 10486}
     - Class: 114
       Script: {instanceID: 10760}
     - Class: 114
       Script: {instanceID: 10884}
     - Class: 114
+      Script: {instanceID: 11110}
+    - Class: 114
       Script: {instanceID: 11266}
+    - Class: 114
+      Script: {instanceID: 11302}
     - Class: 114
       Script: {instanceID: 11368}
     - Class: 114
@@ -129,6 +135,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11748}
     - Class: 114
       Script: {instanceID: 11798}
+    - Class: 114
+      Script: {instanceID: 14450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -304,8 +312,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10510}
     - Class: 114
-      Script: {instanceID: 10734}
-    - Class: 114
       Script: {instanceID: 10760}
     - Class: 114
       Script: {instanceID: 10796}
@@ -327,6 +333,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11630}
     - Class: 114
       Script: {instanceID: 11748}
+    - Class: 114
+      Script: {instanceID: 14450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -956,9 +964,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: dadccab5c24c2df88fb5106abe61a4dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StopMove
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main_Menu.unity
   - Assets/Scenes/Level_1.unity
   - Assets/Scenes/Level_2.unity
-  playerPath: C:/Users/yr020/Desktop/FTC_Builds/Tumble_Proto_6.apk
+  playerPath: C:/Users/yr020/Desktop/FTC_Builds/Tumble_Proto_7.apk
