@@ -8,6 +8,7 @@ public class CubesTypes : MonoBehaviour
 {
     [Header("Common")]
     public CubesTypes Ct;
+    public Movement Mv;
 
     [Header("Pillar")]
     public bool isStep = false;
@@ -21,6 +22,7 @@ public class CubesTypes : MonoBehaviour
 
     [Header("End Cube")]
     public string levelName;
+    public Animator endPanel;
 
 
     // Start is called before the first frame update
@@ -75,9 +77,7 @@ public class CubesTypes : MonoBehaviour
     IEnumerator NextLevelLoad()
     {
         yield return new WaitForSeconds(1f);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = false;
-        GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>().SetTrigger("Next");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(levelName);
+        endPanel.SetTrigger("Start");
+        Mv.enabled = false;
     }
 }

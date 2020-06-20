@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour
     private float swipeResistanceY = 100.0f;
     Vector2 touchPos;
 
+    public ScoreCal sc;
+
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
@@ -72,6 +74,7 @@ public class Movement : MonoBehaviour
             //print("Forward");
             x = 90f;
             transform.position += Vector3.forward * 2;
+            sc.currentMoves += 1;
         }
         //Down
         else if (Input.GetKeyDown(KeyCode.S))
@@ -79,6 +82,7 @@ public class Movement : MonoBehaviour
             //print("Back");
             x = -90f;
             transform.position += Vector3.back * 2;
+            sc.currentMoves += 1;
         }
         //Left
         if (Input.GetKeyDown(KeyCode.A))
@@ -86,6 +90,7 @@ public class Movement : MonoBehaviour
             //print("Left");
             z = 90f;
             transform.position += Vector3.left * 2;
+            sc.currentMoves += 1;
         }
         //Right
         else if (Input.GetKeyDown(KeyCode.D))
@@ -93,6 +98,7 @@ public class Movement : MonoBehaviour
             //print("Right");
             z = -90f;
             transform.position += Vector3.right * 2;
+            sc.currentMoves += 1;
         }
         // if rotation is nonzero, apply it
         if (x != 0f || z != 0f)
