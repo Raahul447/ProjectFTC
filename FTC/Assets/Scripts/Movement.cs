@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -16,7 +17,10 @@ public class Movement : MonoBehaviour
     private float swipeResistanceY = 100.0f;
     Vector2 touchPos;
 
-    public ScoreCal sc;
+    public Text Score;
+
+    //public ScoreCal sc;
+    public int _Moves = 0;
 
     void Start()
     {
@@ -33,73 +37,46 @@ public class Movement : MonoBehaviour
             lerpTime += Time.deltaTime * lerpSpeed;
             transform.rotation = Quaternion.Lerp(oldRotation, newRotation, lerpTime);
         }
+
+        Score.text = _Moves.ToString();
     }
     void UpdateRotationState()
     {
-
         // Get the rotation, if any
         float x = 0f, z = 0f;
 
         //Left
-        if (SwipeManager.IsSwipingUpLeft())
+        if (Input.GetKeyDown(KeyCode.A) || SwipeManager.IsSwipingUpLeft())
         {
             z = 90f;
             transform.position += Vector3.left * 2;
+            _Moves += 1;
         }
 
         //Down
-        if (SwipeManager.IsSwipingDownLeft())
+        if (Input.GetKeyDown(KeyCode.S) || SwipeManager.IsSwipingDownLeft() || SwipeManager.IsSwipingDown() | SwipeManager.IsSwipingLeft())
         {
             x = -90f;
             transform.position += Vector3.back * 2;
+            _Moves += 1;
         }
 
         //Up
-        if (SwipeManager.IsSwipingUpRight())
+        if (Input.GetKeyDown(KeyCode.W) || SwipeManager.IsSwipingUpRight() || SwipeManager.IsSwipingUp() || SwipeManager.IsSwipingRight())
         {
             x = 90f;
             transform.position += Vector3.forward * 2;
+            _Moves += 1;
         }
 
         //Right
-        if (SwipeManager.IsSwipingDownRight())
+        if (Input.GetKeyDown(KeyCode.D) ||SwipeManager.IsSwipingDownRight())
         {
             z = -90f;
             transform.position += Vector3.right * 2;
+            _Moves += 1;
         }
 
-        //Up
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            //print("Forward");
-            x = 90f;
-            transform.position += Vector3.forward * 2;
-            sc.currentMoves += 1;
-        }
-        //Down
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            //print("Back");
-            x = -90f;
-            transform.position += Vector3.back * 2;
-            sc.currentMoves += 1;
-        }
-        //Left
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            //print("Left");
-            z = 90f;
-            transform.position += Vector3.left * 2;
-            sc.currentMoves += 1;
-        }
-        //Right
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            //print("Right");
-            z = -90f;
-            transform.position += Vector3.right * 2;
-            sc.currentMoves += 1;
-        }
         // if rotation is nonzero, apply it
         if (x != 0f || z != 0f)
         {

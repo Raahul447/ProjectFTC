@@ -38,7 +38,7 @@ public class ScoreCal : MonoBehaviour
         else if(currentMoves == star3)
         {
             anim.SetTrigger("3s");
-            Debug.Log("High Score");
+            //Debug.Log("High Score");
         }
         else if(currentMoves == maxMoves)
         {

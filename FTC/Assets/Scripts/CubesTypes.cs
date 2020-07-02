@@ -24,6 +24,11 @@ public class CubesTypes : MonoBehaviour
     public string levelName;
     public Animator endPanel;
 
+    [Header("Score")]
+    public Animator _nextLevel;
+    public int ThreeStars;
+    public int TwoStars;
+    public int OneStar;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +60,18 @@ public class CubesTypes : MonoBehaviour
         else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
         {
             StartCoroutine(NextLevelLoad());
+            if(Mv._Moves <= ThreeStars)
+            {
+                _nextLevel.SetTrigger("3s");
+            }
+            else if(Mv._Moves > ThreeStars && Mv._Moves <= TwoStars)
+            {
+                _nextLevel.SetTrigger("2s");
+            }
+            else if(Mv._Moves > TwoStars)
+            {
+                _nextLevel.SetTrigger("1s");
+            }
         }
     }
 
