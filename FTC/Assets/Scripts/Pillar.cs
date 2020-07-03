@@ -7,7 +7,7 @@ public class Pillar : MonoBehaviour
 {
     public CubesTypes CT;
     public GameObject platform;
-    public float y, time;
+    public float y, time = 0.5f;
     public bool isX = false, isY = false, isZ = false, isAll = false;
     public float X, Y, Z;
 
