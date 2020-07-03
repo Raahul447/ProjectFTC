@@ -9,10 +9,12 @@ public class DeathZone : MonoBehaviour
     private ColorGrading Cg;
     public GameObject GameOver;
     public GameObject MainUI;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         ppv.profile.TryGetSettings(out Cg);
     }
 
@@ -30,6 +32,7 @@ public class DeathZone : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = false;
             GameOver.SetActive(true);
             MainUI.SetActive(false);
+            Destroy(player,2);
         }
     }
 }

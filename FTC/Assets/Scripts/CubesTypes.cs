@@ -85,16 +85,20 @@ public class CubesTypes : MonoBehaviour
 
     IEnumerator Teleport()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = false;
         player.transform.DOScale(0f, 0.3f);
         yield return new WaitForSeconds(0.5f);
         player.transform.position = pos;
         player.transform.DOScale(2, 0.3f);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = true;
     }
 
     IEnumerator NextLevelLoad()
     {
-        yield return new WaitForSeconds(1f);
-        endPanel.SetTrigger("Start");
+        yield return new WaitForSeconds(.1f);
         Mv.enabled = false;
+        yield return new WaitForSeconds(.5f);
+        endPanel.SetTrigger("Start");
+        
     }
 }
