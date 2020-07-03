@@ -2628,6 +2628,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4603234393111890430, guid: d17daf6fe85a59c4a8b1c3ffd97cc709,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f22bc6fca9993946acca1465aeefb8c, type: 2}
     m_RemovedComponents:
     - {fileID: 5239006278892606164, guid: d17daf6fe85a59c4a8b1c3ffd97cc709, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d17daf6fe85a59c4a8b1c3ffd97cc709, type: 3}
@@ -4139,6 +4144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TM: {fileID: 1795219040}
+  Mv: {fileID: 0}
   levelName: 
 --- !u!20 &5004929867180388768 stripped
 Camera:

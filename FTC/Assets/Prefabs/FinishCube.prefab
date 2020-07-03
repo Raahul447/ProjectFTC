@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8f22bc6fca9993946acca1465aeefb8c, type: 2}
+  - {fileID: 2100000, guid: 741cdf360ac06ab449c41836bf72ca58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,6 +129,10 @@ MonoBehaviour:
   CtTelepot: {fileID: 0}
   levelName: 
   endPanel: {fileID: 0}
+  _nextLevel: {fileID: 0}
+  ThreeStars: 0
+  TwoStars: 0
+  OneStar: 0
 --- !u!1001 &3975799206370074342
 PrefabInstance:
   m_ObjectHideFlags: 0
