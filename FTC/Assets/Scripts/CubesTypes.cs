@@ -17,6 +17,7 @@ public class CubesTypes : MonoBehaviour
     public Transform player;
     public Vector3 pos;
     public bool isTeleport = false;
+    public bool omniDirectional = false;
     public CubesTypes CtTelepot;
 
 
@@ -44,33 +45,39 @@ public class CubesTypes : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-
-        if(other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
+        if (omniDirectional)
         {
-            if (!isTeleport)
-            {
-                Ct.isTeleport = false;
-                StartCoroutine(Teleport());
-            }
+            Debug.Log("Portal is Omni Directional");
         }
-        else if(other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
+        else if(!omniDirectional)
         {
-            isStep = true;
-        }
-        else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
-        {
-            StartCoroutine(NextLevelLoad());
-            if(Mv._Moves <= ThreeStars)
+            if (other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
             {
-                _nextLevel.SetTrigger("3s");
+                if (!isTeleport)
+                {
+                    Ct.isTeleport = false;
+                    StartCoroutine(Teleport());
+                }
             }
-            else if(Mv._Moves > ThreeStars && Mv._Moves <= TwoStars)
+            else if (other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
             {
-                _nextLevel.SetTrigger("2s");
+                isStep = true;
             }
-            else if(Mv._Moves > TwoStars)
+            else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
             {
-                _nextLevel.SetTrigger("1s");
+                StartCoroutine(NextLevelLoad());
+                if (Mv._Moves <= ThreeStars)
+                {
+                    _nextLevel.SetTrigger("3s");
+                }
+                else if (Mv._Moves > ThreeStars && Mv._Moves <= TwoStars)
+                {
+                    _nextLevel.SetTrigger("2s");
+                }
+                else if (Mv._Moves > TwoStars)
+                {
+                    _nextLevel.SetTrigger("1s");
+                }
             }
         }
     }

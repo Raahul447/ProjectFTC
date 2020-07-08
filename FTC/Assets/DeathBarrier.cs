@@ -27,8 +27,11 @@ public class DeathBarrier : MonoBehaviour
     IEnumerator DisableMovement()
     {
         yield return new WaitForSeconds(.1f);
+        playerCube.GetComponent<BoxCollider>().enabled = false;
         playerCube.GetComponent<Movement>().enabled = false;
         playerCube.GetComponent<Rigidbody>().isKinematic = false;
+        yield return new WaitForSeconds(.1f);
+        playerCube.GetComponent<BoxCollider>().enabled = true;
         yield return true;
     }
 }
