@@ -80,9 +80,10 @@
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Movement_New.cs" />
     <Compile Include="Assets\Scripts\Pillar.cs" />
-    <Compile Include="Assets\Scripts\PlatformMovement.cs" />
     <Compile Include="Assets\Scripts\Random.cs" />
     <Compile Include="Assets\Scripts\ScoreCal.cs" />
+    <Compile Include="Assets\Scripts\ScrollingEffect.cs" />
+    <Compile Include="Assets\Scripts\SequencePillar.cs" />
     <Compile Include="Assets\Scripts\StopMove.cs" />
     <Compile Include="Assets\Scripts\SwipeManager.cs" />
     <Compile Include="Assets\Scripts\SwitchCube.cs" />
@@ -112,37 +113,37 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -316,7 +317,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
