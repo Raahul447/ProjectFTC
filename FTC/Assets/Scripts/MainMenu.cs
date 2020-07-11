@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
 
     public void ReturntoMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main_Menu");
     }
 
     public void GTMain()

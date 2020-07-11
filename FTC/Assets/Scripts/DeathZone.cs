@@ -7,6 +7,7 @@ public class DeathZone : MonoBehaviour
 {
     public PostProcessVolume ppv;
     private ColorGrading Cg;
+    private DepthOfField dof;
     public GameObject GameOver;
     public GameObject MainUI;
     private GameObject player;
@@ -16,6 +17,7 @@ public class DeathZone : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ppv.profile.TryGetSettings(out Cg);
+        ppv.profile.TryGetSettings(out dof);
     }
 
     // Update is called once per frame
@@ -34,5 +36,10 @@ public class DeathZone : MonoBehaviour
             MainUI.SetActive(false);
             Destroy(player,2);
         }
+    }
+
+    public void pauseButton()
+    {
+        dof.enabled.value = enabled;
     }
 }

@@ -31,6 +31,10 @@ public class CubesTypes : MonoBehaviour
     public int TwoStars;
     public int OneStar;
 
+    [Header("Player Prefs")]
+    public int currentStars = 0;
+    public int levelIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,17 +73,25 @@ public class CubesTypes : MonoBehaviour
                 if (Mv._Moves <= ThreeStars)
                 {
                     _nextLevel.SetTrigger("3s");
+                    currentStars = 3;
+                    PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
                 else if (Mv._Moves > ThreeStars && Mv._Moves <= TwoStars)
                 {
                     _nextLevel.SetTrigger("2s");
+                    currentStars = 2;
+                    PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
                 else if (Mv._Moves > TwoStars)
                 {
                     _nextLevel.SetTrigger("1s");
+                    currentStars = 1;
+                    PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
             }
         }
+
+        Debug.Log(PlayerPrefs.GetInt("Lv" + levelIndex, currentStars));
     }
 
     public void OnTriggerExit(Collider other)

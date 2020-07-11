@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LevelSelect : MonoBehaviour
@@ -25,5 +26,10 @@ public class LevelSelect : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }
