@@ -22,6 +22,16 @@ public class SequencePillar : MonoBehaviour
     public bool P2B;
     public bool P3B;
 
+    [Header("Death Colliders")]
+    public GameObject Col1;
+    public GameObject Col2;
+    public GameObject Col3;
+
+    [Header("Collider Values")]
+    public float C1Y;
+    public float C2Y;
+    public float C3Y;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,15 +51,19 @@ public class SequencePillar : MonoBehaviour
             if (P1B)
             {
                 P1.transform.DOMoveY(P1Y, time);
+                Col1.transform.DOMoveY(C1Y, time);
             }
             if (P2B)
             {
                 P2.transform.DOMoveY(P2Y, time);
+                Col2.transform.DOMoveY(C2Y, time);
             }
             if (P3B)
             {
                 P3.transform.DOMoveY(P3Y, time);
+                Col3.transform.DOMoveY(C3Y, time);
             }
+            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
