@@ -26,11 +26,23 @@ public class SequencePillar : MonoBehaviour
     public GameObject Col1;
     public GameObject Col2;
     public GameObject Col3;
+    
 
     [Header("Collider Values")]
     public float C1Y;
     public float C2Y;
     public float C3Y;
+
+    [Header("Death Colliders Above Platform")]
+    public bool doubleCollider = false;
+    public GameObject Col4;
+    public GameObject Col5;
+    public GameObject Col6;
+
+    [Header("Double Collider Values")]
+    public float C4Y;
+    public float C5Y;
+    public float C6Y;
 
     // Start is called before the first frame update
     void Start()
@@ -52,16 +64,28 @@ public class SequencePillar : MonoBehaviour
             {
                 P1.transform.DOMoveY(P1Y, time);
                 Col1.transform.DOMoveY(C1Y, time);
+                if(doubleCollider)
+                {
+                    Col4.transform.DOMoveY(C4Y, time);
+                }
             }
             if (P2B)
             {
                 P2.transform.DOMoveY(P2Y, time);
                 Col2.transform.DOMoveY(C2Y, time);
+                if (doubleCollider)
+                {
+                    Col5.transform.DOMoveY(C5Y, time);
+                }
             }
             if (P3B)
             {
                 P3.transform.DOMoveY(P3Y, time);
                 Col3.transform.DOMoveY(C3Y, time);
+                if (doubleCollider)
+                {
+                    Col6.transform.DOMoveY(C6Y, time);
+                }
             }
             gameObject.GetComponent<BoxCollider>().enabled = false;
         }
