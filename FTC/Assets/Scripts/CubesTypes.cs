@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
 
 public class CubesTypes : MonoBehaviour
@@ -35,10 +36,14 @@ public class CubesTypes : MonoBehaviour
     public int currentStars = 0;
     public int levelIndex;
 
+    private DepthOfField dof;
+    public PostProcessVolume ppv;
+
     // Start is called before the first frame update
     void Start()
     {
         Ct = GetComponent<CubesTypes>();
+        ppv.profile.TryGetSettings(out dof);
     }
 
     // Update is called once per frame
@@ -118,6 +123,7 @@ public class CubesTypes : MonoBehaviour
         Mv.enabled = false;
         yield return new WaitForSeconds(.5f);
         endPanel.SetTrigger("Start");
-        
+        ppv.profile.TryGetSettings(out dof);
+        dof.enabled.value = enabled;
     }
 }
