@@ -13,12 +13,6 @@ public class DeathBarrier : MonoBehaviour
         playerCube = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnTriggerEnter(Collider other)
     {
         StartCoroutine(DisableMovement());
@@ -30,8 +24,7 @@ public class DeathBarrier : MonoBehaviour
         playerCube.GetComponent<BoxCollider>().enabled = false;
         playerCube.GetComponent<Movement>().enabled = false;
         playerCube.GetComponent<Rigidbody>().isKinematic = false;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(1f);
         playerCube.GetComponent<BoxCollider>().enabled = true;
-        yield return true;
     }
 }
