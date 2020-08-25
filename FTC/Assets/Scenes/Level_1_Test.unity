@@ -3201,6 +3201,17 @@ MonoBehaviour:
           m_StringArgument: tap
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1795219040}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1137285219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4181,6 +4192,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1683639547935756250, guid: d17daf6fe85a59c4a8b1c3ffd97cc709,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4603234393111890430, guid: d17daf6fe85a59c4a8b1c3ffd97cc709,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4199,11 +4215,6 @@ PrefabInstance:
     - target: {fileID: 5239006278892606165, guid: d17daf6fe85a59c4a8b1c3ffd97cc709,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1683639547935756250, guid: d17daf6fe85a59c4a8b1c3ffd97cc709,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7843772442859474186, guid: d17daf6fe85a59c4a8b1c3ffd97cc709,
@@ -5037,7 +5048,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795219038}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78a9759beba13374597d3976aba2da12, type: 3}
   m_Name: 
@@ -6709,6 +6720,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AllowMSAA
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004929866767703278, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004929866767703278, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004929866767703278, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfa56e1e8687b04ea5dd0cb6dbc9044, type: 3}
