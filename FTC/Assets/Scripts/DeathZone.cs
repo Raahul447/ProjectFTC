@@ -11,6 +11,8 @@ public class DeathZone : MonoBehaviour
     public GameObject GameOver;
     public GameObject MainUI;
     private GameObject player;
+    public LifeSystem lives;
+    public GameObject refillLives;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,14 @@ public class DeathZone : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = false;
             GameOver.SetActive(true);
             MainUI.SetActive(false);
+            lives.lives--;
             Destroy(player,2);
+            if(lives.lives == 0)
+            {
+                GameOver.SetActive(false);
+                MainUI.SetActive(false);
+                refillLives.SetActive(true);
+            }
         }
     }
 

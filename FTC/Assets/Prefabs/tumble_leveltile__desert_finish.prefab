@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 865209129092343397}
   - component: {fileID: 865209129092343398}
   - component: {fileID: 865209129092343399}
-  - component: {fileID: 865209129092343400}
+  - component: {fileID: 5663734609602678520}
   m_Layer: 0
   m_Name: Cube
   m_TagString: End Cube
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneLoad: 0
---- !u!114 &865209129092343400
+--- !u!114 &5663734609602678520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,11 +116,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 865209129092343402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e416e9afb0ae2c441804b179d5357608, type: 3}
+  m_Script: {fileID: 11500000, guid: c0182e864aacfa44baf7335e9ce5cdce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Level_2
-  tutorialCube: {fileID: 0}
+  Ct: {fileID: 0}
+  Mv: {fileID: 0}
+  isStep: 0
+  player: {fileID: 0}
+  pos: {x: 0, y: 0, z: 0}
+  isTeleport: 0
+  omniDirectional: 0
+  CtTelepot: {fileID: 0}
+  levelName: 
+  endPanel: {fileID: 0}
+  _nextLevel: {fileID: 0}
+  ThreeStars: 0
+  TwoStars: 0
+  OneStar: 0
+  currentStars: 0
+  levelIndex: 0
+  ppv: {fileID: 0}
 --- !u!1 &1097948913440178130
 GameObject:
   m_ObjectHideFlags: 0

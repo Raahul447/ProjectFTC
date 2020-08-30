@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\LevelSelection_Final.cs" />
+    <Compile Include="Assets\Scripts\LifeSystem.cs" />
     <Compile Include="Assets\Scripts\LockAspectRatio.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MenuCube.cs" />
@@ -705,6 +706,18 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{6E24EC34-7DCE-CD89-7894-E7ACB14A4E8F}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlayerPrefsEditor.Editor.csproj">
+      <Project>{25DFFAB0-5CC8-0684-6BC4-ED8249670AFD}</Project>
+      <Name>Unity.PlayerPrefsEditor.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlayerPrefsEditor.EditorResources.csproj">
+      <Project>{F7141515-A7AE-EEB3-D516-DB99B569BD19}</Project>
+      <Name>Unity.PlayerPrefsEditor.EditorResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlayerPrefsEditor.Samples.SampleScene.csproj">
+      <Project>{2ED108BA-DE2B-1032-3927-1EDB371F5343}</Project>
+      <Name>Unity.PlayerPrefsEditor.Samples.SampleScene</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
