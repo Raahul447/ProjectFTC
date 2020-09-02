@@ -12,7 +12,10 @@ public class LifeSystem : MonoBehaviour
     [SerializeField]
     private int currentLives;
 
-    public Text livesText;
+    [SerializeField]
+    private GameObject livesTextCanvas;
+    [SerializeField]
+    private Text livesText;
 
     public double timerForLife;
 
@@ -20,19 +23,8 @@ public class LifeSystem : MonoBehaviour
 
     void Awake()
     {
-        //DontDestroyOnLoad(this);
-
-        //int numPlayers = GameObject.FindGameObjectsWithTag("Player").Length;
-        //if (numPlayers != 1)
-        //{
-        //    Destroy(this.gameObject);
-        //}
-        //// if more then one music player is in the scene
-        ////destroy ourselves
-        //else
-        //{
-        //    DontDestroyOnLoad(gameObject);
-        //}
+        livesTextCanvas = GameObject.FindGameObjectWithTag("LivesTextCanvas");
+        livesText = GameObject.FindGameObjectWithTag("LivesTextCanvas").GetComponentInChildren<Text>();
 
         if (!PlayerPrefs.HasKey("Lives"))
         {

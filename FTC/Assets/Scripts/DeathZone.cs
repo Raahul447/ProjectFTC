@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeathZone : MonoBehaviour
 {
@@ -11,12 +12,15 @@ public class DeathZone : MonoBehaviour
     public GameObject GameOver;
     public GameObject MainUI;
     private GameObject player;
-    public LifeSystem lives;
+    [SerializeField]
+    private GameObject lives;
     public GameObject refillLives;
 
     // Start is called before the first frame update
     void Start()
     {
+        lives = GameObject.FindGameObjectWithTag("LifeSystem");
+        //refillLives = GameObject.FindGameObjectWithTag("RefillLives");
         player = GameObject.FindGameObjectWithTag("Player");
         ppv.profile.TryGetSettings(out Cg);
         ppv.profile.TryGetSettings(out dof);
@@ -36,9 +40,10 @@ public class DeathZone : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = false;
             GameOver.SetActive(true);
             MainUI.SetActive(false);
-            lives.lives--;
+            lives.GetComponent<LifeSystem>().lives--;
+            //lives.lives--;
             Destroy(player,2);
-            if(lives.lives == 0)
+            if(lives.GetComponent<LifeSystem>().lives == 0)
             {
                 GameOver.SetActive(false);
                 MainUI.SetActive(false);

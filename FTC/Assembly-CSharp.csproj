@@ -69,6 +69,8 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\DoNotDestroyLifeSystem.cs" />
+    <Compile Include="Assets\DoNotDestroyLivesTextCanvas.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
@@ -77,12 +79,14 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scenes\Rohit Test\Teleport Effect v1.0\Portal Particle\Scrpt\CameraHolder.cs" />
-    <Compile Include="Assets\Scripts\Ad_Manager.cs" />
+    <Compile Include="Assets\Scripts\Block_Spawn.cs" />
+    <Compile Include="Assets\Scripts\CubeStart.cs" />
     <Compile Include="Assets\Scripts\CubesTypes.cs" />
     <Compile Include="Assets\Scripts\DeathBarrier.cs" />
     <Compile Include="Assets\Scripts\DeathZone.cs" />
     <Compile Include="Assets\Scripts\DeleteData.cs" />
     <Compile Include="Assets\Scripts\EndLevel.cs" />
+    <Compile Include="Assets\Scripts\FadeUI.cs" />
     <Compile Include="Assets\Scripts\Level_Stars.cs" />
     <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\LevelSelect.cs" />
@@ -91,6 +95,7 @@
     <Compile Include="Assets\Scripts\LockAspectRatio.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MenuCube.cs" />
+    <Compile Include="Assets\Scripts\MenuUI.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Movement_New.cs" />
     <Compile Include="Assets\Scripts\MoveToNextLevel.cs" />
@@ -98,6 +103,7 @@
     <Compile Include="Assets\Scripts\Pillar.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\PlayerStart.cs" />
+    <Compile Include="Assets\Scripts\Porta_Tutorial.cs" />
     <Compile Include="Assets\Scripts\Random.cs" />
     <Compile Include="Assets\Scripts\ScoreCal.cs" />
     <Compile Include="Assets\Scripts\ScrollingEffect.cs" />
@@ -108,14 +114,15 @@
     <Compile Include="Assets\Scripts\SwitchCube.cs" />
     <Compile Include="Assets\Scripts\Tutorial.cs" />
     <Compile Include="Assets\Scripts\TutorialMovement.cs" />
+    <Compile Include="Assets\Scripts\TutorialPillar.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
+    <Compile Include="Assets\Scripts\WobblyText.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Shader\GradientBackground.shader" />
     <None Include="Assets\Shader\FogShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\UnityAds\link.xml" />
     <None Include="Assets\Scenes\Rohit Test\Shader\ShieldFX.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
