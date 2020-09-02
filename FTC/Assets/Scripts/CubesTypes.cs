@@ -13,6 +13,7 @@ public class CubesTypes : MonoBehaviour
 
     [Header("Pillar")]
     public bool isStep = false;
+    public Renderer rendy;
 
     [Header("Teleport")]
     public Transform player;
@@ -44,6 +45,7 @@ public class CubesTypes : MonoBehaviour
     {
         Ct = GetComponent<CubesTypes>();
         ppv.profile.TryGetSettings(out dof);
+        rendy = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -68,9 +70,18 @@ public class CubesTypes : MonoBehaviour
                     StartCoroutine(Teleport());
                 }
             }
+            else if (other.gameObject.tag == "Player" && this.gameObject.tag == "Tutorial_Teleport")
+            {
+                if (!isTeleport)
+                {
+                    Ct.isTeleport = false;
+                    StartCoroutine(Tutorial_Teleport());
+                }
+            }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
             {
                 isStep = true;
+                GetComponent<Renderer>().material.color = new Color32(159, 159, 159, 255);
             }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
             {
@@ -101,7 +112,7 @@ public class CubesTypes : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport")
+        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Teleport" || other.gameObject.tag == "Player" && this.gameObject.tag == "Tutorial_Teleport")
         {
             isTeleport = !isTeleport;
         }
@@ -115,6 +126,16 @@ public class CubesTypes : MonoBehaviour
         player.transform.position = pos;
         player.transform.DOScale(2, 0.3f);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().enabled = true;
+    }
+
+    IEnumerator Tutorial_Teleport()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<TutorialMovement>().enabled = false;
+        player.transform.DOScale(0f, 0.3f);
+        yield return new WaitForSeconds(0.5f);
+        player.transform.position = pos;
+        player.transform.DOScale(2, 0.3f);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<TutorialMovement>().enabled = true;
     }
 
     IEnumerator NextLevelLoad()

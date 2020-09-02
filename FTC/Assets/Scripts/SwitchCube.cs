@@ -23,7 +23,7 @@ public class SwitchCube : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            transform.DOMoveY(y, time);
+            transform.DOLocalMoveY(y, time);
         }
     }
 }

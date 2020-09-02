@@ -16,7 +16,9 @@ public class TutorialMovement : MonoBehaviour
     private float swipeResistanceY = 100.0f;
     Vector2 touchPos;
 
-    public Animator camAnim;
+    public int count = 0;
+
+    public Animator welcomeAnim;
 
     void Start()
     {
@@ -32,6 +34,11 @@ public class TutorialMovement : MonoBehaviour
         {
             lerpTime += Time.deltaTime * lerpSpeed;
             transform.rotation = Quaternion.Lerp(oldRotation, newRotation, lerpTime);
+        }
+
+        if(count == 2)
+        {
+            welcomeAnim.SetTrigger("step4");
         }
     }
     void UpdateRotationState()
@@ -59,7 +66,6 @@ public class TutorialMovement : MonoBehaviour
         {
             x = 90f;
             transform.position += Vector3.forward * 2;
-            camAnim.SetTrigger("nextTutorial");
         }
 
         ////Right
@@ -75,7 +81,7 @@ public class TutorialMovement : MonoBehaviour
             //print("Forward");
             x = 90f;
             transform.position += Vector3.forward * 2;
-            camAnim.SetTrigger("nextTutorial");
+            count += 1;
         }
         //Down
         else if (Input.GetKeyDown(KeyCode.S))
