@@ -23,9 +23,6 @@ public class LifeSystem : MonoBehaviour
 
     void Awake()
     {
-        livesTextCanvas = GameObject.FindGameObjectWithTag("LivesTextCanvas");
-        livesText = GameObject.FindGameObjectWithTag("LivesTextCanvas").GetComponentInChildren<Text>();
-
         if (!PlayerPrefs.HasKey("Lives"))
         {
             PlayerPrefs.SetString("LifeUpdateTime", DateTime.Now.ToString());
@@ -55,6 +52,9 @@ public class LifeSystem : MonoBehaviour
 
     private void Update()
     {
+        livesTextCanvas = GameObject.FindGameObjectWithTag("LivesTextCanvas");
+        livesText = GameObject.FindGameObjectWithTag("LivesTextCanvas").GetComponentInChildren<Text>();
+
         if (lives < maxLives)
         {
             timerForLife += Time.deltaTime;

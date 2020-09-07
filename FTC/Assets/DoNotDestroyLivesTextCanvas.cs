@@ -16,4 +16,12 @@ public class DoNotDestroyLivesTextCanvas : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject); // On reload, singleton already set, so destroy duplicate.
     }
+
+    private void Update()
+    {
+        if(Application.loadedLevelName == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
