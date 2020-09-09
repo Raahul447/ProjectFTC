@@ -3105,8 +3105,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3083836571037491772, guid: 322c1995bb160d2419156841121693e8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322c1995bb160d2419156841121693e8, type: 3}
 --- !u!1 &1047674154
 GameObject:
@@ -3274,7 +3273,7 @@ MonoBehaviour:
           m_StringArgument: tap
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1795219040}
+      - m_Target: {fileID: 0}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -3829,16 +3828,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 865209129092343402, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971637799166678415, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 1097948913440178130, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3848,6 +3837,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865209129092343402, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971637799166678415, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4659790799640386529, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
         type: 3}
@@ -5390,21 +5389,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1033012006}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1795219040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795219038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a9759beba13374597d3976aba2da12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lerpSpeed: 10
-  count: 0
-  welcomeAnim: {fileID: 0}
 --- !u!1 &1796995987
 GameObject:
   m_ObjectHideFlags: 0
@@ -7175,7 +7159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69ce66f977499f4aae7965e959dd789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 1795219040}
+  TM: {fileID: 0}
   Mv: {fileID: 0}
   levelName: 
 --- !u!20 &5004929867180388768 stripped

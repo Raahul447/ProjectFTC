@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4378765287595143687
+--- !u!1 &3467209024967908580
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 765372297853632532}
+  - component: {fileID: 451866173821906679}
   m_Layer: 0
-  m_Name: tumble_leveltile_mountain
+  m_Name: tumble_leveltile_mountain_2way
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &765372297853632532
+--- !u!4 &451866173821906679
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378765287595143687}
+  m_GameObject: {fileID: 3467209024967908580}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.1, y: -13.556, z: -2.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8767742240087693687}
+  - {fileID: 8464296651736725396}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6366399768412951535
+--- !u!1 &6089853179069267212
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,10 +39,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8767742240087693687}
-  - component: {fileID: 6080796966361424043}
-  - component: {fileID: 5907858085958368893}
-  - component: {fileID: 2169287002182305531}
+  - component: {fileID: 8464296651736725396}
+  - component: {fileID: 6393188937168850504}
+  - component: {fileID: 6712213134223954078}
+  - component: {fileID: 8096948880251612380}
   m_Layer: 0
   m_Name: tumble_leveltile:pCube1
   m_TagString: Untagged
@@ -50,35 +50,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8767742240087693687
+--- !u!4 &8464296651736725396
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366399768412951535}
+  m_GameObject: {fileID: 6089853179069267212}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 765372297853632532}
+  m_Father: {fileID: 451866173821906679}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6080796966361424043
+--- !u!33 &6393188937168850504
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366399768412951535}
+  m_GameObject: {fileID: 6089853179069267212}
   m_Mesh: {fileID: 4113820090407991628, guid: c1618b58bd68388428d328e1b1522e0c, type: 3}
---- !u!23 &5907858085958368893
+--- !u!23 &6712213134223954078
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366399768412951535}
+  m_GameObject: {fileID: 6089853179069267212}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -89,7 +89,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96178759386a4fe4aac3efff620b5d97, type: 2}
+  - {fileID: 2100000, guid: 38f6fcbb09a766141810e3dcc95a9815, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,13 +110,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2169287002182305531
+--- !u!65 &8096948880251612380
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366399768412951535}
+  m_GameObject: {fileID: 6089853179069267212}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

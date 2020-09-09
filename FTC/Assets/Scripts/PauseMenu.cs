@@ -12,9 +12,13 @@ public class PauseMenu : MonoBehaviour
     public bool _isTMove;
     public bool _isMove;
 
+    [SerializeField]
+    private GameObject lifeSystem;
+
     // Start is called before the first frame update
     void Start()
     {
+        lifeSystem = GameObject.FindGameObjectWithTag("LifeSystem");
         ppv.profile.TryGetSettings(out dof);
         _PauseMenu = this.gameObject;
     }
@@ -52,6 +56,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         Scene loadedLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene(loadedLevel.buildIndex);
+        if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
+        {
+            lifeSystem.GetComponent<LifeSystem>().lives--;
+            return;
+        }
     }
 
     public void _Pause()
