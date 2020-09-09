@@ -945,6 +945,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3619720466791858765, guid: 7b03cf42005702845a7fa4f20de6d277,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 4201414219598346543, guid: 7b03cf42005702845a7fa4f20de6d277,
         type: 3}
       propertyPath: m_Name
@@ -1054,11 +1059,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3619720466791858765, guid: 7b03cf42005702845a7fa4f20de6d277,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b03cf42005702845a7fa4f20de6d277, type: 3}
@@ -2015,6 +2015,17 @@ MonoBehaviour:
           m_StringArgument: isSwitch
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 963194233}
+        m_MethodName: Cam_Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &699734582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,6 +2183,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7176833357446346783, guid: c4144fa9c20f92946a3d13c840a49aaa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 5131274568486086562, guid: c4144fa9c20f92946a3d13c840a49aaa,
         type: 3}
       propertyPath: m_Name
@@ -2231,11 +2247,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7176833357446346783, guid: c4144fa9c20f92946a3d13c840a49aaa,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4144fa9c20f92946a3d13c840a49aaa, type: 3}
@@ -2804,6 +2815,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
   - component: {fileID: 963194232}
+  - component: {fileID: 963194233}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2944,7 +2956,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e56625e49ca116e4fbba623e5f21672f, type: 2}
   m_CullingMode: 0
@@ -2982,6 +2994,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec4e3c0eb2a937499a15b94230352d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &963194233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0b65acd4155b24c973b2e0ab3989d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 963194225}
+  x_Norm: 1.1
+  y_Norm: 14.79
+  z_Norm: -5.4
+  y_Cam: 15
+  time: 0.9
+  x_Rot: -8.52
+  y_Rot: 16.93
+  z_Rot: 4.2
+  isSwitch: 0
 --- !u!1 &988490567
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,16 +4077,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 865209129092343402, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971637799166678415, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 1097948913440178130, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4119,6 +4143,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1971637798956054540, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 865209129092343402, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971637799166678415, guid: ebaf515f5fca2b74fbd9364a3c83ad66,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295

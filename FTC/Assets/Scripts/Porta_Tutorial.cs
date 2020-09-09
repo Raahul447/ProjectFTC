@@ -17,6 +17,8 @@ public class Porta_Tutorial : MonoBehaviour
     public float Ptime;
     public float Psize;
 
+    public GameObject diamond2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,7 @@ public class Porta_Tutorial : MonoBehaviour
         PCube6.transform.DOLocalMoveY(-7.9771f, 0.7f);
         PCube7.SetActive(true);
         PCube7.transform.DOLocalMoveY(-7.94f, 0.7f);
+        diamond2.SetActive(true);
         player.enabled = true;
     }
 }
