@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using System;
 using System.Linq;
+using MilkShake;
 
 public class Movement : MonoBehaviour
 {
@@ -31,44 +32,17 @@ public class Movement : MonoBehaviour
 
     public float raycastHitDistance = 2;
 
-    //public List<Transform> pathPoints = new List<Transform>();
-    //[SerializeField]
-    //private Transform playerPos;
+    public Shaker myShaker;
+    public ShakePreset CamShake;
 
-    //public void OnDrawGizmos()
-    //{
-    //    if (pathPoints == null || pathPoints.Count < 2)
-    //    {
-    //        return;
-    //    }
-    //    for (var i = 1; i < pathPoints.Count; i++)
-    //    {
-    //        Gizmos.DrawLine(pathPoints[i - 1].position, pathPoints[i].position);
-    //    }
-    //}
     void Start()
     {
-        //playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        //if (pathPoints == null)
-        //{
-        //    Debug.LogError("Movement Path cannot be null, I must have a path to follow.", gameObject);
-        //    return;
-        //}
         newRotation = oldRotation = transform.rotation;
     }
 
     void Update()
     {
-        // get input from user and update state if need be
-        //if (pathPoints.Equals(playerPos))
-        //{
         UpdateRotationState();
-        //}
-        //else
-        //{
-        //    Debug.Log("Can't Move");
-        //}
-        // if the lerp time is less than one, lerp to the new rotation
         if (lerpTime < 1f)
         {
             lerpTime += Time.deltaTime * lerpSpeed;
@@ -77,7 +51,8 @@ public class Movement : MonoBehaviour
 
         Score.text = _Moves.ToString();
     }
-    void UpdateRotationState()
+
+    public void UpdateRotationState()
     {
         var forward = Vector3.forward;
         var right = Vector3.right;
@@ -120,6 +95,7 @@ public class Movement : MonoBehaviour
                 canMoveForward = false;
             }
         }
+
 
         if (Physics.Raycast(transform.position, right, out hit, raycastHitDistance))
         {
@@ -177,7 +153,6 @@ public class Movement : MonoBehaviour
             }
         }
 
-
         // if rotation is nonzero, apply it
         if (x != 0f || z != 0f)
         {
@@ -185,7 +160,31 @@ public class Movement : MonoBehaviour
             oldRotation = transform.rotation;
             lerpTime = 0f;
         }
-    
+
+        Shakes();
+
+    }
+
+    public void Shakes()
+    {
+
+        if ((Input.GetKeyDown(KeyCode.W) && !canMoveForward))
+        {
+            myShaker.Shake(CamShake);
+        }
+        else if ((Input.GetKeyDown(KeyCode.A) && !canMoveLeft))
+        {
+            myShaker.Shake(CamShake);
+        }
+        else if ((Input.GetKeyDown(KeyCode.S) && !canMoveBackward))
+        {
+            myShaker.Shake(CamShake);
+
+        }
+        else if ((Input.GetKeyDown(KeyCode.D) && !canMoveRight))
+        {
+            myShaker.Shake(CamShake);
+        }
     }
 } 
 

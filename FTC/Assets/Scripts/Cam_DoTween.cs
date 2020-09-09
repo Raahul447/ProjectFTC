@@ -55,7 +55,7 @@ public class Cam_DoTween : MonoBehaviour
     IEnumerator CamMove()
     {
         Camera.transform.DOLocalMoveY(35, 1);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.7f);
         Camera.transform.DOLocalMoveY(y_Cam, time);
     }
 }

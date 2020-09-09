@@ -14,7 +14,9 @@ public class SwitchCamera_Tutorial : MonoBehaviour
     public GameObject LCube1, LCube2, LCube3, LCube4, LCube5, LCube6;
     public float Lsize, Ltime, L_Y;
 
-    public Image View; 
+    public Image View;
+    public GameObject PEf1;
+    public GameObject PEf2;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +49,8 @@ public class SwitchCamera_Tutorial : MonoBehaviour
         Cube4.transform.DOScaleY(size, time); Cube4.transform.DOMoveY(Y, 1);
         Cube5.transform.DOScaleY(size, time); Cube5.transform.DOMoveY(Y, 1);
         Cube6.transform.DOScaleY(size, time); Cube6.transform.DOMoveY(Y, 1);
+        PEf1.SetActive(false);
+        PEf2.SetActive(false);
         //yield return new WaitForSeconds(1);
         //LCube1.transform.DOScaleY(Lsize, time); LCube1.transform.DOLocalMoveY(L_Y, 1);
         //LCube2.transform.DOScaleY(Lsize, time); LCube2.transform.DOLocalMoveY(L_Y, 1);
