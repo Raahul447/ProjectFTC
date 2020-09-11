@@ -51,8 +51,8 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -193,6 +193,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576027646393827737, guid: cb351572af7048343901e503f5a2dcc3,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576027646393827737, guid: cb351572af7048343901e503f5a2dcc3,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb351572af7048343901e503f5a2dcc3, type: 3}
@@ -1621,7 +1631,7 @@ PrefabInstance:
     - target: {fileID: 2246645797439491437, guid: 322c1995bb160d2419156841121693e8,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2246645797439491437, guid: 322c1995bb160d2419156841121693e8,
         type: 3}
@@ -3627,6 +3637,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tumble_leveltile
       objectReference: {fileID: 0}
+    - target: {fileID: 7467219599614652056, guid: 84f2e8ced5b375047be005b6fe3baf98,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5907523630350949515, guid: 84f2e8ced5b375047be005b6fe3baf98,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3680,6 +3695,11 @@ PrefabInstance:
     - target: {fileID: 5907523630350949515, guid: 84f2e8ced5b375047be005b6fe3baf98,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 233454520025534320, guid: 84f2e8ced5b375047be005b6fe3baf98,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1232186419, guid: 84f2e8ced5b375047be005b6fe3baf98, type: 3}
