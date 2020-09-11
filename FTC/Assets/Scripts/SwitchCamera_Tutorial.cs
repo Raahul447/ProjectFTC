@@ -18,6 +18,14 @@ public class SwitchCamera_Tutorial : MonoBehaviour
     public GameObject PEf1;
     public GameObject PEf2;
 
+    public GameObject LastCube;
+    public GameObject Player;
+
+    public GameObject dust1;
+    public GameObject dust2;
+    public GameObject dust3;
+    public GameObject section;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,13 +59,17 @@ public class SwitchCamera_Tutorial : MonoBehaviour
         Cube6.transform.DOScaleY(size, time); Cube6.transform.DOMoveY(Y, 1);
         PEf1.SetActive(false);
         PEf2.SetActive(false);
-        //yield return new WaitForSeconds(1);
-        //LCube1.transform.DOScaleY(Lsize, time); LCube1.transform.DOLocalMoveY(L_Y, 1);
-        //LCube2.transform.DOScaleY(Lsize, time); LCube2.transform.DOLocalMoveY(L_Y, 1);
-        //LCube3.transform.DOScaleY(Lsize, time); LCube3.transform.DOLocalMoveY(L_Y, 1);
-        //LCube4.transform.DOScaleY(Lsize, time); LCube4.transform.DOLocalMoveY(L_Y, 1);
-        //LCube5.transform.DOScaleY(Lsize, time); LCube5.transform.DOLocalMoveY(L_Y, 1);
-        //LCube6.transform.DOScaleY(Lsize, time); LCube6.transform.DOLocalMoveY(L_Y, 1);
-        //View.DOFade(1, 1);
+        player.transform.DOScale(0f, 1f);
+        LastCube.transform.DOScaleY(size, time); LastCube.transform.DOMoveY(-20, 1);
+        yield return new WaitForSeconds(1);
+        dust1.transform.DOMoveY(-40, 1);
+        dust2.transform.DOMoveY(-40, 1);
+        dust3.transform.DOMoveY(-40, 1);
+        yield return new WaitForSeconds(1f);
+        dust1.SetActive(false);
+        dust2.SetActive(false);
+        dust3.SetActive(false);
+        //yield return new WaitForSeconds(0.3f);
+        //section.SetActive(false);
     }
 }
