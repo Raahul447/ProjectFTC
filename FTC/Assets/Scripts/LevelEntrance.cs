@@ -25,6 +25,8 @@ public class LevelEntrance : MonoBehaviour
     public Image lbot;
 
     public string lName;
+    public GameObject GameUI;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,12 +49,12 @@ public class LevelEntrance : MonoBehaviour
         LBottom.transform.DOLocalMoveY(-287, 1.2f);
         yield return new WaitForSeconds(1);
         Border.DOFade(1, 1);
-        Number.transform.DOLocalMoveY(-11.57002f, 1);
+        Number.transform.DOLocalMoveY(-29.1f, 1);
         Line.DOFade(1, 1);
         Name.transform.DOLocalMoveY(18.59998f, 1);
         yield return new WaitForSeconds(2);
         Border.DOFade(0, 1);
-        Number.transform.DOLocalMoveY(-139, 1);
+        Number.transform.DOLocalMoveY(-139, 0.6f);
         Line.DOFade(0, 1);
         Name.transform.DOLocalMoveY(-87, 1);
         yield return new WaitForSeconds(0.3f);
@@ -63,6 +65,7 @@ public class LevelEntrance : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         ltop.DOFade(0, 1);
         lbot.DOFade(0, 1);
-        
+        yield return new WaitForSeconds(0.3f);
+        GameUI.SetActive(true);
     }
 }
