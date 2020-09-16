@@ -98,7 +98,7 @@ public class CubesTypes : MonoBehaviour
                     currentStars = 2;
                     PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
-                else if (Mv._Moves > TwoStars)
+                else if (Mv._Moves >= OneStar)
                 {
                     _nextLevel.SetTrigger("1s");
                     currentStars = 1;

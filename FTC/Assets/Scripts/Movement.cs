@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
 using System;
 using System.Linq;
@@ -20,7 +21,7 @@ public class Movement : MonoBehaviour
     private float swipeResistanceY = 100.0f;
     Vector2 touchPos;
 
-    public Text Score;
+    public TextMeshProUGUI Score;
 
     //public ScoreCal sc;
     public int _Moves = 0;
@@ -35,9 +36,16 @@ public class Movement : MonoBehaviour
     public Shaker myShaker;
     public ShakePreset CamShake;
 
+    public CubesTypes CT;
+    public GameOver GO;
+
+    [Header("Hearts")]
+    public Image[] Hearts;
+
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
+        //lives = GameObject.FindGameObjectWithTag("LifeSystem");
     }
 
     void Update()
@@ -49,7 +57,24 @@ public class Movement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(oldRotation, newRotation, lerpTime);
         }
 
-        Score.text = _Moves.ToString();
+        if (_Moves <= CT.ThreeStars)
+        {
+            Score.text = _Moves.ToString() + "/" + CT.ThreeStars;
+        }
+        else if (_Moves > CT.ThreeStars && _Moves <= CT.TwoStars)
+        {
+            Score.text = _Moves.ToString() + "/" + CT.TwoStars;
+        }
+        else if (_Moves <= CT.OneStar && _Moves > CT.TwoStars)
+        {
+            Score.text = _Moves.ToString() + "/" + CT.OneStar;
+        }
+        else if(_Moves > CT.OneStar)
+        {
+            Score.text = "0";
+            GO.enabled = true;
+        }
+
     }
 
     public void UpdateRotationState()
