@@ -6,7 +6,7 @@ using UnityEngine;
 public class InGameUi : MonoBehaviour
 {
     public GameObject Moves;
-    public GameObject Lives;
+    //public GameObject Lives;
     public GameObject Settings;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class InGameUi : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Moves.transform.DOLocalMoveY(-3, 0.7f);
-        Lives.transform.DOLocalMoveY(-612, 0.7f);
+        //Lives.transform.DOLocalMoveY(-612, 0.7f);
         yield return new WaitForSeconds(0.4f);
         Settings.transform.DOLocalMoveX(-336.3f, 0.7f);
     }
@@ -34,7 +34,7 @@ public class InGameUi : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Moves.transform.DOLocalMoveY(-99.01001f, 0.7f);
-        Lives.transform.DOLocalMoveY(-512.14f, 0.7f);
+        //Lives.transform.DOLocalMoveY(-512.14f, 0.7f);
         yield return new WaitForSeconds(0.4f);
         Settings.transform.DOLocalMoveX(-513.2f, 0.7f);
     }

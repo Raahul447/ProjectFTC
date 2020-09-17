@@ -33,7 +33,7 @@ public class LevelEntrance : MonoBehaviour
     {
         StartCoroutine(StartLevel());
         textName.text = lName;
-        Debug.Log(scene.buildIndex);
+        //Debug.Log(scene.buildIndex);
     }
 
     // Update is called once per frame

@@ -36,7 +36,7 @@ public class CubeTileEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timer);
+        //Debug.Log(timer);
     }
 
     IEnumerator SpawnPlayer()

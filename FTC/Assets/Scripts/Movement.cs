@@ -42,9 +42,13 @@ public class Movement : MonoBehaviour
     [Header("Hearts")]
     public Image[] Hearts;
 
+    public Movement2 Mv2;
+    
+
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
+        Mv2 = GameObject.Find("Player").GetComponent<Movement2>();
         //lives = GameObject.FindGameObjectWithTag("LifeSystem");
     }
 
@@ -73,6 +77,7 @@ public class Movement : MonoBehaviour
         {
             Score.text = "0";
             GO.enabled = true;
+            Mv2.enabled = true;
         }
 
     }
@@ -96,7 +101,7 @@ public class Movement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -right, out hit, raycastHitDistance))
         {
-            Debug.Log("Left Hit");
+            //Debug.Log("Left Hit");
             if (hit.collider.gameObject.tag == "Barrier")
             {
                 canMoveLeft = false;
@@ -105,7 +110,7 @@ public class Movement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -forward, out hit, raycastHitDistance))
         {
-            Debug.Log("Back Hit");
+            //Debug.Log("Back Hit");
             if (hit.collider.gameObject.tag == "Barrier")
             {
                 canMoveBackward = false;
@@ -114,7 +119,7 @@ public class Movement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, forward, out hit, raycastHitDistance))
         {
-            Debug.Log("Front Hit");
+            //Debug.Log("Front Hit");
             if (hit.collider.gameObject.tag == "Barrier")
             {
                 canMoveForward = false;
@@ -124,7 +129,7 @@ public class Movement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, right, out hit, raycastHitDistance))
         {
-            Debug.Log("Right Hit");
+            //Debug.Log("Right Hit");
             if (hit.collider.gameObject.tag == "Barrier")
             {
                 canMoveRight = false;
