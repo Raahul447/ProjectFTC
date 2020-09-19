@@ -27,7 +27,7 @@ public class InGameUi : MonoBehaviour
         Moves.transform.DOLocalMoveY(-3, 0.7f);
         //Lives.transform.DOLocalMoveY(-612, 0.7f);
         yield return new WaitForSeconds(0.4f);
-        Settings.transform.DOLocalMoveX(-336.3f, 0.7f);
+        Settings.transform.DOLocalMoveY(2, 0.7f);
     }
 
     IEnumerator OutGame()

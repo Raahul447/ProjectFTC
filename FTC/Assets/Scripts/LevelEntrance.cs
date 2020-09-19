@@ -27,6 +27,8 @@ public class LevelEntrance : MonoBehaviour
     public string lName;
     public GameObject GameUI;
 
+    public GameObject LE;
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,5 +69,7 @@ public class LevelEntrance : MonoBehaviour
         lbot.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         GameUI.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        LE.SetActive(false);
     }
 }
