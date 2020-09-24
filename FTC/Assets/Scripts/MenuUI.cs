@@ -35,6 +35,12 @@ public class MenuUI : MonoBehaviour
     public Image Credits_BG;
     public Image Settings_BG;
 
+    [Header("Lvl_Select")]
+    public GameObject Desert;
+    public GameObject Mountain;
+    public GameObject Ice;
+    public GameObject Lava;
+
     // Bools
     public bool isLS = false;
 
@@ -57,10 +63,10 @@ public class MenuUI : MonoBehaviour
             BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
             Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
 
-            Play_BG.DOFade(1, 1);
-            LS_BG.DOFade(0, 1);
-            Settings_BG.DOFade(0, 1);
-            Credits_BG.DOFade(0, 1);
+            //Play_BG.DOFade(1, 1);
+            //LS_BG.DOFade(0, 1);
+            //Settings_BG.DOFade(0, 1);
+            //Credits_BG.DOFade(0, 1);
         }
     }
 
@@ -84,10 +90,10 @@ public class MenuUI : MonoBehaviour
         SettingsObj.DOAnchorPos(new Vector2(549, 0), 1f);
         Underline.DOAnchorPos(new Vector2(60, -333.8f), 0.5f);
 
-        Credits_BG.DOFade(1, 1);
-        Play_BG.DOFade(0, 1);
-        LS_BG.DOFade(0, 1);
-        Settings_BG.DOFade(0, 1);
+        //Credits_BG.DOFade(1, 1);
+        //Play_BG.DOFade(0, 1);
+        //LS_BG.DOFade(0, 1);
+        //Settings_BG.DOFade(0, 1);
     }
 
     public void Settings()
@@ -98,10 +104,10 @@ public class MenuUI : MonoBehaviour
         CreditsObj.DOAnchorPos(new Vector2(-549, 0), 1f);
         Underline.DOAnchorPos(new Vector2(157, -333.8f), 0.5f);
 
-        Settings_BG.DOFade(1, 1);
-        Credits_BG.DOFade(0, 1);
-        Play_BG.DOFade(0, 1);
-        LS_BG.DOFade(0, 1);
+        //Settings_BG.DOFade(1, 1);
+        //Credits_BG.DOFade(0, 1);
+        //Play_BG.DOFade(0, 1);
+        //LS_BG.DOFade(0, 1);
     }
 
     public void LevelSelect()
@@ -117,10 +123,14 @@ public class MenuUI : MonoBehaviour
         BottomTab.DOAnchorPos(new Vector2(0, -36.1f), 0.5f);
         Underline.DOAnchorPosY(-467, 0.5f);
 
-        LS_BG.DOFade(1, 1);
-        Settings_BG.DOFade(0, 1);
-        Credits_BG.DOFade(0, 1);
-        Play_BG.DOFade(0, 1);
+        Desert.transform.DOScale(new Vector3(1, 1, 1), 1);
+        Mountain.transform.DOScale(new Vector3(1, 1, 1), 1);
+        Ice.transform.DOScale(new Vector3(1, 1, 1), 1);
+        Lava.transform.DOScale(new Vector3(1, 1, 1), 1);
+        //LS_BG.DOFade(1, 1);
+        //Settings_BG.DOFade(0, 1);
+        //Credits_BG.DOFade(0, 1);
+        //Play_BG.DOFade(0, 1);
 
         isLS = true;
     }
@@ -134,10 +144,10 @@ public class MenuUI : MonoBehaviour
         CreditsObj.DOAnchorPos(new Vector2(1098, 0), 1f);
         Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
 
-        Play_BG.DOFade(1, 1);
-        LS_BG.DOFade(0, 1);
-        Settings_BG.DOFade(0, 1);
-        Credits_BG.DOFade(0, 1);
+        //Play_BG.DOFade(1, 1);
+        //LS_BG.DOFade(0, 1);
+        //Settings_BG.DOFade(0, 1);
+        //Credits_BG.DOFade(0, 1);
     }
 
     public void BackArrow()
@@ -154,9 +164,14 @@ public class MenuUI : MonoBehaviour
         CreditsObj.DOAnchorPos(new Vector2(1098, 0), 1f);
         SettingsObj.DOAnchorPos(new Vector2(2196, 0), 1f);
 
-        Play_BG.DOFade(1, 1);
-        LS_BG.DOFade(0, 1);
-        Settings_BG.DOFade(0, 1);
-        Credits_BG.DOFade(0, 1);
+        Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Mountain.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Lava.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+
+        //Play_BG.DOFade(1, 1);
+        //LS_BG.DOFade(0, 1);
+        //Settings_BG.DOFade(0, 1);
+        //Credits_BG.DOFade(0, 1);
     }
 }

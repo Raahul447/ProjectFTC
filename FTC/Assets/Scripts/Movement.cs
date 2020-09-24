@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
     public Image[] Hearts;
 
     public Movement2 Mv2;
-    
+    public PauseMenu_New PN;
 
     void Start()
     {
@@ -147,6 +147,8 @@ public class Movement : MonoBehaviour
                 z = 90f;
                 transform.position += Vector3.left * 2;
                 _Moves += 1;
+                PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
+                PN.isPaused = false;
             }
         }
 
@@ -158,6 +160,8 @@ public class Movement : MonoBehaviour
                 x = -90f;
                 transform.position += Vector3.back * 2;
                 _Moves += 1;
+                PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
+                PN.isPaused = false;
             }
         }
 
@@ -169,6 +173,8 @@ public class Movement : MonoBehaviour
                 x = 90f;
                 transform.position += Vector3.forward * 2;
                 _Moves += 1;
+                PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
+                PN.isPaused = false;
             }
         }
 
@@ -180,6 +186,8 @@ public class Movement : MonoBehaviour
                 z = -90f;
                 transform.position += Vector3.right * 2;
                 _Moves += 1;
+                PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
+                PN.isPaused = false;
             }
         }
 

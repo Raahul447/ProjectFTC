@@ -39,6 +39,8 @@ public class CubesTypes : MonoBehaviour
 
     private DepthOfField dof;
     public PostProcessVolume ppv;
+    public GameObject Score;
+    public ScoreEntrance Se;
 
     // Start is called before the first frame update
     void Start()
@@ -88,19 +90,25 @@ public class CubesTypes : MonoBehaviour
                 StartCoroutine(NextLevelLoad());
                 if (Mv._Moves <= ThreeStars)
                 {
-                    _nextLevel.SetTrigger("3s");
+                    //_nextLevel.SetTrigger("3s");
+                    Score.SetActive(true);
+                    Se.Star3();
                     currentStars = 3;
                     PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
                 else if (Mv._Moves > ThreeStars && Mv._Moves <= TwoStars)
                 {
-                    _nextLevel.SetTrigger("2s");
+                    //_nextLevel.SetTrigger("2s");
+                    Score.SetActive(true);
+                    Se.Star2();
                     currentStars = 2;
                     PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
                 else if (Mv._Moves >= OneStar)
                 {
-                    _nextLevel.SetTrigger("1s");
+                    //_nextLevel.SetTrigger("1s");
+                    Score.SetActive(true);
+                    Se.Star1();
                     currentStars = 1;
                     PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
