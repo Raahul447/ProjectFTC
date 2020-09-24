@@ -21,7 +21,7 @@ public class Diamond : MonoBehaviour
     void Start()
     {
         diamond.transform.DOLocalMoveY(yPos, time);
-        m_Material = GetComponent<Renderer>().material;
+        m_Material = GetComponentInChildren<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -60,10 +60,12 @@ public class Diamond : MonoBehaviour
 
     IEnumerator DiamondEnd()
     {
-        diamond.GetComponent<Renderer>().material = g_Material;
+        diamond.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 1);
+        yield return new WaitForSeconds(1);
+        diamond.GetComponentInChildren<Renderer>().material = g_Material;
         yield return new WaitForSeconds(0.7f);
-        diamond.transform.DOScale(new Vector3(0, 0, 0), 1);
-        yield return new WaitForSeconds(0.5f);
-        diamond.SetActive(false);
+        diamond.transform.DOScale(new Vector3(1, 1, 1), 1);
+        //yield return new WaitForSeconds(0.5f);
+        //diamond.SetActive(false);
     }
 }
