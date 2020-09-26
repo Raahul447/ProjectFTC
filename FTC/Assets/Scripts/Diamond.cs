@@ -61,9 +61,9 @@ public class Diamond : MonoBehaviour
     IEnumerator DiamondEnd()
     {
         diamond.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), .5f);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.4f);
         diamond.GetComponentInChildren<Renderer>().material = g_Material;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         diamond.transform.DOScale(new Vector3(1, 1, 1), 1);
         //yield return new WaitForSeconds(0.5f);
         //diamond.SetActive(false);

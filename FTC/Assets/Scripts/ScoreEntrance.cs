@@ -54,6 +54,7 @@ public class ScoreEntrance : MonoBehaviour
 
     IEnumerator StartLevel1()
     {
+        yield return new WaitForSeconds(1.5f);
         Bg.DOFade(0.5f, 0.5f);
         yield return new WaitForSeconds(1);
         TopImage.DOFade(1, 1);
@@ -73,12 +74,13 @@ public class ScoreEntrance : MonoBehaviour
         Home.DOFade(1, 1);
         Restart.DOFade(1, 1);
         Next.DOFade(1, 1);
-        StarComp1.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f);
+        StarComp1.transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.5f);
     }
 
 
     IEnumerator StartLevel2()
     {
+        yield return new WaitForSeconds(1.5f);
         Bg.DOFade(0.5f, 0.5f);
         yield return new WaitForSeconds(1);
         TopImage.DOFade(1, 1);
@@ -98,13 +100,14 @@ public class ScoreEntrance : MonoBehaviour
         Home.DOFade(1, 1);
         Restart.DOFade(1, 1);
         Next.DOFade(1, 1);
-        StarComp1.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f);
-        StarComp2.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f);
+        StarComp1.transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.5f);
+        StarComp2.transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.5f);
     }
 
 
     IEnumerator StartLevel3()
     {
+        yield return new WaitForSeconds(1.5f);
         Bg.DOFade(0.5f, 0.5f);
         yield return new WaitForSeconds(1f);
         TopImage.DOFade(1, 1);

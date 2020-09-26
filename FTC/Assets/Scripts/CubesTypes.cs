@@ -104,7 +104,7 @@ public class CubesTypes : MonoBehaviour
                     currentStars = 2;
                     PlayerPrefs.SetInt("Lv" + levelIndex, currentStars);
                 }
-                else if (Mv._Moves >= OneStar)
+                else if (Mv._Moves > TwoStars && Mv._Moves <= OneStar)
                 {
                     //_nextLevel.SetTrigger("1s");
                     Score.SetActive(true);
@@ -150,7 +150,7 @@ public class CubesTypes : MonoBehaviour
     {
         yield return new WaitForSeconds(.1f);
         Mv.enabled = false;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.1f);
         endPanel.SetTrigger("Start");
         ppv.profile.TryGetSettings(out dof);
         dof.enabled.value = enabled;
