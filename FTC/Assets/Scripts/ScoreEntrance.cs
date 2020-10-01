@@ -134,7 +134,7 @@ public class ScoreEntrance : MonoBehaviour
 
     public void HomeButton()
     {
-        SceneManager.LoadScene("MenuTestV1");
+        SceneManager.LoadScene("Main_Menu_V2");
     }
 
     public void RetryButton()

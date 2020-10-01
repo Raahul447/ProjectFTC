@@ -6,6 +6,7 @@ using UnityEngine;
 public class CubeStart : MonoBehaviour
 {
     public GameObject cube;
+    public TutorialMovement TM;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +23,6 @@ public class CubeStart : MonoBehaviour
     public void scaleSpawn()
     {
         cube.transform.DOScale(new Vector3(2, 2, 2), 0.5f);
+        TM.enabled = true;
     }
 }

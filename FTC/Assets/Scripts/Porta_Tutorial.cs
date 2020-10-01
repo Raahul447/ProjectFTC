@@ -42,7 +42,7 @@ public class Porta_Tutorial : MonoBehaviour
     IEnumerator StartPortals()
     {
         yield return new WaitForSeconds(0.3f);
-        player.enabled = false;
+        //player.enabled = false;
         yield return new WaitForSeconds(1);
         Cube1.transform.DOScaleY(size, time); Cube1.transform.DOMoveY(Y, 1);
         Cube2.transform.DOScaleY(size, time); Cube2.transform.DOMoveY(Y, 1);
@@ -64,6 +64,6 @@ public class Porta_Tutorial : MonoBehaviour
         PCube7.SetActive(true);
         PCube7.transform.DOLocalMoveY(-7.94f, 0.7f);
         diamond2.SetActive(true);
-        player.enabled = true;
+        //player.enabled = true;
     }
 }

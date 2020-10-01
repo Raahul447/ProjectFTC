@@ -11,7 +11,7 @@ public class LifeSystem : MonoBehaviour
     public int maxLives = 2;
     public float lifeReplenishTime = 30f;
     [SerializeField]
-    private int currentLives;
+    public int currentLives;
 
     [SerializeField]
     private GameObject livesTextCanvas;

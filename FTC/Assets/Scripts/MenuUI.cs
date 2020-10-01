@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 using UnityEngine;
 
 public class MenuUI : MonoBehaviour
@@ -34,6 +36,7 @@ public class MenuUI : MonoBehaviour
     public Image LS_BG;
     public Image Credits_BG;
     public Image Settings_BG;
+    public Image UnderlineColor;
 
     [Header("Lvl_Select")]
     public GameObject Desert;
@@ -41,13 +44,31 @@ public class MenuUI : MonoBehaviour
     public GameObject Ice;
     public GameObject Lava;
 
+    [Header("Sub Menus")]
+    public GameObject DSub;
+    public GameObject MSub;
+    public GameObject SSub;
+    public GameObject LSub;
+
+    [Header("BG")]
+    public GameObject Main;
+    public Material D;
+    public Material M;
+    public Material S;
+    public Material L;
+
+    public TextMeshProUGUI LvlSlct;
+    public GameObject PlayB;
+
     // Bools
     public bool isLS = false;
+    int recentLevel;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StartUI());
+        recentLevel = PlayerPrefs.GetInt("levelAt", 1);
     }
 
     // Update is called once per frame
@@ -81,6 +102,10 @@ public class MenuUI : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
         Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
+        UnderlineColor.color = new Color32(255, 121, 140, 255);
+        PlayB.transform.DOLocalMoveY(0, 1);
+        yield return new WaitForSeconds(0.2f);
+        PlayB.SetActive(true);
     }
 
     public void Credits()
@@ -89,7 +114,8 @@ public class MenuUI : MonoBehaviour
         CreditsObj.DOAnchorPos(new Vector2(0, 0), 1f);
         SettingsObj.DOAnchorPos(new Vector2(549, 0), 1f);
         Underline.DOAnchorPos(new Vector2(60, -333.8f), 0.5f);
-
+        UnderlineColor.color = new Color32(255, 182, 114, 255);
+        //PlayB.SetActive(false);
         //Credits_BG.DOFade(1, 1);
         //Play_BG.DOFade(0, 1);
         //LS_BG.DOFade(0, 1);
@@ -103,7 +129,8 @@ public class MenuUI : MonoBehaviour
         SettingsObj.DOAnchorPos(new Vector2(0, 0), 1f);
         CreditsObj.DOAnchorPos(new Vector2(-549, 0), 1f);
         Underline.DOAnchorPos(new Vector2(157, -333.8f), 0.5f);
-
+        UnderlineColor.color = new Color32(128, 255, 166, 255);
+        //PlayB.SetActive(false);
         //Settings_BG.DOFade(1, 1);
         //Credits_BG.DOFade(0, 1);
         //Play_BG.DOFade(0, 1);
@@ -133,6 +160,7 @@ public class MenuUI : MonoBehaviour
         //Play_BG.DOFade(0, 1);
 
         isLS = true;
+        PlayB.SetActive(false);
     }
 
     public void Play()
@@ -143,7 +171,8 @@ public class MenuUI : MonoBehaviour
         SettingsObj.DOAnchorPos(new Vector2(2196, 0), 1f);
         CreditsObj.DOAnchorPos(new Vector2(1098, 0), 1f);
         Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
-
+        UnderlineColor.color = new Color32(255, 121, 140, 255);
+        PlayB.SetActive(true);
         //Play_BG.DOFade(1, 1);
         //LS_BG.DOFade(0, 1);
         //Settings_BG.DOFade(0, 1);
@@ -169,9 +198,89 @@ public class MenuUI : MonoBehaviour
         Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
         Lava.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
 
+        StartCoroutine(loadplay());
         //Play_BG.DOFade(1, 1);
         //LS_BG.DOFade(0, 1);
         //Settings_BG.DOFade(0, 1);
         //Credits_BG.DOFade(0, 1);
+    }
+
+    public void DesertSub()
+    {
+        StartCoroutine(DS());
+        Main.GetComponent<Renderer>().material = D; 
+    }
+
+    IEnumerator loadplay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        PlayB.SetActive(true);
+    }
+
+    IEnumerator DS()
+    {
+        Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Mountain.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Lava.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        yield return new WaitForSeconds(0.3f);
+        Desert.SetActive(false);
+        DSub.SetActive(true);
+    }
+
+    public void MtnSub()
+    {
+        StartCoroutine(MS());
+        Main.GetComponent<Renderer>().material = M;
+    }
+
+    IEnumerator MS()
+    {
+        Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Mountain.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Lava.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        yield return new WaitForSeconds(0.3f);
+        Mountain.SetActive(false);
+        MSub.SetActive(true);
+    }
+
+    public void SnowSub()
+    {
+        StartCoroutine(SS());
+        Main.GetComponent<Renderer>().material = S;
+    }
+
+    IEnumerator SS()
+    {
+        Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Mountain.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Lava.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        yield return new WaitForSeconds(0.3f);
+        Ice.SetActive(false);
+        SSub.SetActive(true);
+    }
+
+    public void LavaSub()
+    {
+        StartCoroutine(LS());
+        Main.GetComponent<Renderer>().material = L;
+    }
+
+    IEnumerator LS()
+    {
+        Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Mountain.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        Lava.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        yield return new WaitForSeconds(0.3f);
+        Lava.SetActive(false);
+        LSub.SetActive(true);
+    }
+
+    public void playbutton()
+    {
+        SceneManager.LoadScene(recentLevel);
     }
 }

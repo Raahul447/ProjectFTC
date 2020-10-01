@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using MilkShake;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -19,6 +20,12 @@ public class TutorialMovement : MonoBehaviour
     public int count = 0;
 
     public Animator welcomeAnim;
+    public bool isFront = false;
+    public bool isBack = false;
+
+    [Header("Shake")]
+    public Shaker myShaker;
+    public ShakePreset CamShake;
 
     void Start()
     {
@@ -27,6 +34,9 @@ public class TutorialMovement : MonoBehaviour
 
     void Update()
     {
+
+        Shakes();
+
         // get input from user and update state if need be
         UpdateRotationState();
         // if the lerp time is less than one, lerp to the new rotation
@@ -41,18 +51,11 @@ public class TutorialMovement : MonoBehaviour
             welcomeAnim.SetTrigger("step4");
         }
     }
+
     void UpdateRotationState()
     {
-
         // Get the rotation, if any
         float x = 0f, z = 0f;
-
-        ////Left
-        //if (SwipeManager.IsSwipingUpLeft())
-        //{
-        //    z = 90f;
-        //    transform.position += Vector3.left * 2;
-        //}
 
         //Down
         if (SwipeManager.IsSwipingDownLeft())
@@ -68,15 +71,8 @@ public class TutorialMovement : MonoBehaviour
             transform.position += Vector3.forward * 2;
         }
 
-        ////Right
-        //if (SwipeManager.IsSwipingDownRight())
-        //{
-        //    z = -90f;
-        //    transform.position += Vector3.right * 2;
-        //}
-
         //Up
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && isFront)
         {
             //print("Forward");
             x = 90f;
@@ -84,32 +80,36 @@ public class TutorialMovement : MonoBehaviour
             count += 1;
         }
         //Down
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S) && isBack)
         {
             //print("Back");
             x = -90f;
             transform.position += Vector3.back * 2;
         }
-        ////Left
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    //print("Left");
-        //    z = 90f;
-        //    transform.position += Vector3.left * 2;
-        //}
-        ////Right
-        //else if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    //print("Right");
-        //    z = -90f;
-        //    transform.position += Vector3.right * 2;
-        //}
+
         // if rotation is nonzero, apply it
         if (x != 0f || z != 0f)
         {
             newRotation = Quaternion.Euler(x, 0f, z) * newRotation;
             oldRotation = transform.rotation;
             lerpTime = 0f;
+        }
+
+        myShaker.Shake(CamShake);
+    }
+
+    public void Shakes()
+    {
+
+        if ((Input.GetKeyDown(KeyCode.W) && !isFront))
+        {
+            myShaker.Shake(CamShake);
+
+        }
+        else if ((Input.GetKeyDown(KeyCode.S) && !isBack))
+        {
+            myShaker.Shake(CamShake);
+            Debug.Log("Shake");
         }
     }
 }

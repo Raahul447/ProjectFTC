@@ -57,7 +57,18 @@ public class PauseMenu_New : MonoBehaviour
     {
         PauseMask.transform.DOLocalMoveY(2, 0.4f);
         ExitObj.transform.DOLocalMoveY(-38, 0.5f);
+        isPaused = false;
         ExitObj.SetActive(false);
+    }
+
+    public void YesButton()
+    {
+        SceneManager.LoadScene("Main_Menu_V2");
+        if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
+        {
+            lifeSystem.GetComponent<LifeSystem>().lives--;
+            return;
+        }
     }
 
     public void Retry()
