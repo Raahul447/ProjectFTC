@@ -69,9 +69,27 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\DesertShowStars.cs" />
     <Compile Include="Assets\DoNotDestroyLifeSystem.cs" />
     <Compile Include="Assets\DoNotDestroyLivesTextCanvas.cs" />
     <Compile Include="Assets\FrameRate.cs" />
+    <Compile Include="Assets\IceShowStars.cs" />
+    <Compile Include="Assets\LavaShowStars.cs" />
+    <Compile Include="Assets\MilkShake\Demo\Scripts\CameraDistance.cs" />
+    <Compile Include="Assets\MilkShake\Demo\Scripts\CameraSwitcher.cs" />
+    <Compile Include="Assets\MilkShake\Demo\Scripts\CustomShake.cs" />
+    <Compile Include="Assets\MilkShake\Demo\Scripts\ShakeButton.cs" />
+    <Compile Include="Assets\MilkShake\Demo\Scripts\ShakeClicker.cs" />
+    <Compile Include="Assets\MilkShake\Demo\Scripts\ToggleAudio.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\IShakeParameters.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\ShakeInstance.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\ShakeParameters.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\ShakePreset.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\Shaker.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\ShakeResult.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\ShakeState.cs" />
+    <Compile Include="Assets\MilkShake\Scripts\ShakeType.cs" />
+    <Compile Include="Assets\MountainShowStars.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
@@ -81,43 +99,69 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scenes\Rohit Test\Teleport Effect v1.0\Portal Particle\Scrpt\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\Block_Spawn.cs" />
+    <Compile Include="Assets\Scripts\Cam_DoTween.cs" />
+    <Compile Include="Assets\Scripts\CamShake.cs" />
+    <Compile Include="Assets\Scripts\CubePillarEffect.cs" />
+    <Compile Include="Assets\Scripts\CubeRotate.cs" />
     <Compile Include="Assets\Scripts\CubeStart.cs" />
     <Compile Include="Assets\Scripts\CubesTypes.cs" />
+    <Compile Include="Assets\Scripts\CubeTileEffect.cs" />
     <Compile Include="Assets\Scripts\DeathBarrier.cs" />
     <Compile Include="Assets\Scripts\DeathZone.cs" />
     <Compile Include="Assets\Scripts\DeleteData.cs" />
+    <Compile Include="Assets\Scripts\Diamond.cs" />
     <Compile Include="Assets\Scripts\EndLevel.cs" />
     <Compile Include="Assets\Scripts\FadeUI.cs" />
+    <Compile Include="Assets\Scripts\FinalMenu.cs" />
+    <Compile Include="Assets\Scripts\FloatCube.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\HeartsSystem.cs" />
+    <Compile Include="Assets\Scripts\InGameUi.cs" />
     <Compile Include="Assets\Scripts\Level_Stars.cs" />
     <Compile Include="Assets\Scripts\LevelChange.cs" />
+    <Compile Include="Assets\Scripts\LevelEntrance.cs" />
+    <Compile Include="Assets\Scripts\LevelIcons.cs" />
     <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\LevelSelection_Final.cs" />
     <Compile Include="Assets\Scripts\LifeSystem.cs" />
     <Compile Include="Assets\Scripts\LockAspectRatio.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MenuCube.cs" />
+    <Compile Include="Assets\Scripts\MenuHearts.cs" />
     <Compile Include="Assets\Scripts\MenuUI.cs" />
+    <Compile Include="Assets\Scripts\MenuV3.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Movement_New.cs" />
+    <Compile Include="Assets\Scripts\Movement2.cs" />
     <Compile Include="Assets\Scripts\MoveToNextLevel.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu_New.cs" />
     <Compile Include="Assets\Scripts\Pillar.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\PlayerStart.cs" />
     <Compile Include="Assets\Scripts\Porta_Tutorial.cs" />
     <Compile Include="Assets\Scripts\Random.cs" />
     <Compile Include="Assets\Scripts\ScoreCal.cs" />
+    <Compile Include="Assets\Scripts\ScoreEntrance.cs" />
     <Compile Include="Assets\Scripts\ScrollingEffect.cs" />
     <Compile Include="Assets\Scripts\ScrollSnapRect.cs" />
     <Compile Include="Assets\Scripts\SequencePillar.cs" />
     <Compile Include="Assets\Scripts\StopMove.cs" />
+    <Compile Include="Assets\Scripts\Sub_Back.cs" />
     <Compile Include="Assets\Scripts\SwipeManager.cs" />
+    <Compile Include="Assets\Scripts\SwitchCamera_Tutorial.cs" />
     <Compile Include="Assets\Scripts\SwitchCube.cs" />
+    <Compile Include="Assets\Scripts\Titles.cs" />
+    <Compile Include="Assets\Scripts\TTB.cs" />
     <Compile Include="Assets\Scripts\Tutorial.cs" />
+    <Compile Include="Assets\Scripts\TutorialDisable.cs" />
     <Compile Include="Assets\Scripts\TutorialMovement.cs" />
+    <Compile Include="Assets\Scripts\TutorialOutside.cs" />
     <Compile Include="Assets\Scripts\TutorialPillar.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
     <Compile Include="Assets\Scripts\WobblyText.cs" />
+    <None Include="Assets\MilkShake\Documentation\Simple Setup.txt" />
+    <None Include="Assets\MilkShake\Documentation\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Shader\GradientBackground.shader" />
@@ -143,43 +187,43 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Monetization">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -353,7 +397,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>C:/Users/rohit/Documents/GitHub/ProjectFTC/FTC/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>C:/Users/yr020/Desktop/Unity Projects/Personal/FTC(Github)/ProjectFTC/FTC/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

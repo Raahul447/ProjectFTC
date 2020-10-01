@@ -46,6 +46,8 @@ public class SwitchCamera_Tutorial : MonoBehaviour
     public GameObject L4;
 
     public Animator anim;
+    public GameObject D;
+    public GameObject D2;
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +100,7 @@ public class SwitchCamera_Tutorial : MonoBehaviour
         SS1.SetActive(false);
         SS2.SetActive(false);
         L1.SetActive(false);
+        D.SetActive(false);
         L2.SetActive(false);
         L3.SetActive(false);
         L4.transform.DOLocalMoveY(-300, 1);
@@ -118,5 +121,6 @@ public class SwitchCamera_Tutorial : MonoBehaviour
         TTB.transform.DOLocalMoveZ(-3.5f, 1.5F);
         yield return new WaitForSeconds(0.5f);
         anim.enabled = true;
+        D2.SetActive(true);
     }
 }
