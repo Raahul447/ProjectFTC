@@ -36,17 +36,19 @@ public class MusicBox : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
         scene = SceneManager.GetActiveScene();
+        Debug.Log(scene);
         if (scene.name == "Main_Menu_V2")
         {
             Audiomanager.audiomanager.Play(mainMenuTheme);
             //StartCoroutine(PlayMusic());
         }
-        //else if (scene.name == "Level_1_Test" || scene.name == "Level_2")
-        //{
-        //    Audiomanager.audiomanager.Stop(mainMenuTheme);
-        //    Audiomanager.audiomanager.Play(set1Theme);
-        //}
+        else if (scene.name == "Level_1_Test" || scene.name == "Level_2")
+        {
+            Audiomanager.audiomanager.Stop(mainMenuTheme);
+            //Audiomanager.audiomanager.Play(set1Theme);
+        }
         //Debug.Log(scene.name);
         //Debug.Log(mode);
     }
