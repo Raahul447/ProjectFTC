@@ -23,6 +23,8 @@ public class ScoreEntrance : MonoBehaviour
     public Image Bg;
     public Image TopImage;
     public Image BotImage;
+    public Image fadeImageLeft;
+    public Image fadeImageRight;
 
     [Header("Icons")]
     public Image Home;
@@ -139,12 +141,12 @@ public class ScoreEntrance : MonoBehaviour
 
     public void RetryButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(FadeRetry());
     }
 
     public void NextButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(FadeNextLevel());
     }
 
 
@@ -161,5 +163,23 @@ public class ScoreEntrance : MonoBehaviour
     public void Star3()
     {
         StartCoroutine(StartLevel3());
+    }
+
+    IEnumerator FadeNextLevel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
+        fadeImageRight.transform.DOLocalMoveX(278, 1f);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator FadeRetry()
+    {
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
+        fadeImageRight.transform.DOLocalMoveX(278, 1f);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

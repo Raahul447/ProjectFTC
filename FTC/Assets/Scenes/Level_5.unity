@@ -283,6 +283,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19646832}
   m_CullTransparentMesh: 0
+--- !u!114 &35072553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8485573571621222947, guid: 9c1fb1e4dfddc274e898b10bb4983509,
+    type: 3}
+  m_PrefabInstance: {fileID: 1101225637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &40787429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5907523630350949515, guid: 84f2e8ced5b375047be005b6fe3baf98,
@@ -3736,7 +3748,7 @@ PrefabInstance:
     - target: {fileID: 8356122462164273274, guid: 21e84668198a81f4faf4642d51c50e73,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8356122462164273279, guid: 21e84668198a81f4faf4642d51c50e73,
         type: 3}
@@ -5443,6 +5455,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelNumber
       objectReference: {fileID: 0}
+    - target: {fileID: 5887945624739670816, guid: 9c1fb1e4dfddc274e898b10bb4983509,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5887945624739670820, guid: 9c1fb1e4dfddc274e898b10bb4983509,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5568,6 +5585,11 @@ PrefabInstance:
       propertyPath: LE
       value: 
       objectReference: {fileID: 1101225638}
+    - target: {fileID: 5887945624739670823, guid: 9c1fb1e4dfddc274e898b10bb4983509,
+        type: 3}
+      propertyPath: fadeImage
+      value: 
+      objectReference: {fileID: 35072553}
     - target: {fileID: 5887945624435728569, guid: 9c1fb1e4dfddc274e898b10bb4983509,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -5894,16 +5916,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 290831040710680520, guid: 57824010e1cc8954da48f988f385e281,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898977824467566356, guid: 57824010e1cc8954da48f988f385e281,
-        type: 3}
-      propertyPath: ppv
-      value: 
-      objectReference: {fileID: 729904809}
     - target: {fileID: 3408800872700591082, guid: 57824010e1cc8954da48f988f385e281,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5959,6 +5971,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 290831040710680520, guid: 57824010e1cc8954da48f988f385e281,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898977824467566356, guid: 57824010e1cc8954da48f988f385e281,
+        type: 3}
+      propertyPath: ppv
+      value: 
+      objectReference: {fileID: 729904809}
     - target: {fileID: 9045662929642563601, guid: 57824010e1cc8954da48f988f385e281,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7277,6 +7299,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b03cf42005702845a7fa4f20de6d277, type: 3}
+--- !u!114 &1649335261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7077772139000690675, guid: 20125c667bef69840b0a4c699d01b805,
+    type: 3}
+  m_PrefabInstance: {fileID: 1734054958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1669780513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5246699328629980763, guid: 54ae0a1dc90a6314cbd8e4edf2a3e731,
@@ -7640,6 +7674,11 @@ PrefabInstance:
       propertyPath: Ls
       value: 
       objectReference: {fileID: 2120467323}
+    - target: {fileID: 687513999035331177, guid: 20125c667bef69840b0a4c699d01b805,
+        type: 3}
+      propertyPath: faeImageRight
+      value: 
+      objectReference: {fileID: 1649335261}
     - target: {fileID: 7419919119055464016, guid: 20125c667bef69840b0a4c699d01b805,
         type: 3}
       propertyPath: m_IsActive

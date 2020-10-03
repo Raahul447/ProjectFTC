@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class LevelEntrance : MonoBehaviour
 {
+    public Image fadeImageLeft;
+    public Image fadeImageRight;
+
     public GameObject LTop;
     public GameObject LBottom;
 
@@ -46,7 +49,10 @@ public class LevelEntrance : MonoBehaviour
 
     IEnumerator StartLevel()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-883, 1f);
+        fadeImageRight.transform.DOLocalMoveX(883, 1f);
+        yield return new WaitForSeconds(0.5f);
         LTop.transform.DOLocalMoveY(340, 1.2f);
         LBottom.transform.DOLocalMoveY(-287, 1.2f);
         yield return new WaitForSeconds(1);
