@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Audiomanager.cs" />
+    <Compile Include="Assets\AudioManager_V2.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Assets\MilkShake\Scripts\ShakeState.cs" />
     <Compile Include="Assets\MilkShake\Scripts\ShakeType.cs" />
     <Compile Include="Assets\MountainShowStars.cs" />
+    <Compile Include="Assets\MusicBox.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
@@ -146,6 +149,7 @@
     <Compile Include="Assets\Scripts\ScrollingEffect.cs" />
     <Compile Include="Assets\Scripts\ScrollSnapRect.cs" />
     <Compile Include="Assets\Scripts\SequencePillar.cs" />
+    <Compile Include="Assets\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\StopMove.cs" />
     <Compile Include="Assets\Scripts\Sub_Back.cs" />
     <Compile Include="Assets\Scripts\SwipeManager.cs" />
@@ -160,6 +164,7 @@
     <Compile Include="Assets\Scripts\TutorialPillar.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
     <Compile Include="Assets\Scripts\WobblyText.cs" />
+    <Compile Include="Assets\Sounds.cs" />
     <None Include="Assets\MilkShake\Documentation\Simple Setup.txt" />
     <None Include="Assets\MilkShake\Documentation\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

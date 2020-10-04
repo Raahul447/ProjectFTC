@@ -37,10 +37,20 @@ public class CubesTypes : MonoBehaviour
     public int currentStars = 0;
     public int levelIndex;
 
+    [Header("Other")]
     private DepthOfField dof;
     public PostProcessVolume ppv;
     public GameObject Score;
     public ScoreEntrance Se;
+
+    [Header("Audio Sources")]
+    public AudioSource AS;
+    public AudioManager_V2 AM;
+
+    [Header("Audio Clips")]
+    public AudioClip Switches;
+    public AudioClip Portals;
+    public AudioClip Final;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +58,11 @@ public class CubesTypes : MonoBehaviour
         Ct = GetComponent<CubesTypes>();
         ppv.profile.TryGetSettings(out dof);
         rendy = GetComponent<Renderer>();
+        AS = GameObject.FindGameObjectWithTag("AS").GetComponent<AudioSource>();
+        AM = GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager_V2>();
+        Portals = (AudioClip)Resources.Load("SoundEffects/Portals_Tumble");
+        Switches = (AudioClip)Resources.Load("SoundEffects/Switch_Tumble");
+        Final = (AudioClip)Resources.Load("SoundEffects/Level_ClearTumble");
     }
 
     // Update is called once per frame
@@ -69,6 +84,7 @@ public class CubesTypes : MonoBehaviour
                 if (!isTeleport)
                 {
                     Ct.isTeleport = false;
+                    AS.PlayOneShot(Portals, 0.7f);
                     StartCoroutine(Teleport());
                 }
             }
@@ -82,12 +98,15 @@ public class CubesTypes : MonoBehaviour
             }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
             {
+                AS.PlayOneShot(Switches, 0.3f);
                 isStep = true;
                 GetComponent<Renderer>().material.color = new Color32(159, 159, 159, 255);
             }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
             {
                 StartCoroutine(NextLevelLoad());
+                AM.endFade();
+                AS.PlayOneShot(Final, 0.4f);
                 if (Mv._Moves <= ThreeStars)
                 {
                     //_nextLevel.SetTrigger("3s");

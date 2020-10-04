@@ -40,6 +40,9 @@ public class ScoreEntrance : MonoBehaviour
     public GameObject StarComp2;
     public GameObject StarComp3;
 
+    [Header("Loading")]
+    public TextMeshProUGUI Loading;
+
 
     // Start is called before the first frame update
     void Start()
@@ -170,7 +173,9 @@ public class ScoreEntrance : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
