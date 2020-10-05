@@ -45,10 +45,13 @@ public class Movement : MonoBehaviour
     public Movement2 Mv2;
     public PauseMenu_New PN;
 
+    public AudioSource pSound;
+
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
         Mv2 = GameObject.Find("Player").GetComponent<Movement2>();
+        //pSound = GameObject.Find("Player").GetComponent<AudioSource>();
         //lives = GameObject.FindGameObjectWithTag("LifeSystem");
     }
 
@@ -149,6 +152,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                //pSound.Play();
             }
         }
 
@@ -162,6 +166,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                //pSound.Play();
             }
         }
 
@@ -175,6 +180,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                //pSound.Play();
             }
         }
 
@@ -188,6 +194,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                //pSound.Play();
             }
         }
 
