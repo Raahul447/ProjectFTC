@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.PostProcessing;
+using TMPro;
 
 public class PauseMenu_New : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class PauseMenu_New : MonoBehaviour
     public PostProcessVolume ppv;
     private ColorGrading Cg;
     private DepthOfField dof;
+
+    [Header("Fade Images")]
+    public Image fadeImageLeft;
+    public Image fadeImageRight;
+
+    [Header("Loading Text")]
+    public TextMeshProUGUI loadingText;
 
     // Start is called before the first frame update
     void Start()
@@ -63,12 +71,7 @@ public class PauseMenu_New : MonoBehaviour
 
     public void YesButton()
     {
-        SceneManager.LoadScene("Main_Menu_V2");
-        if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
-        {
-            lifeSystem.GetComponent<LifeSystem>().lives--;
-            return;
-        }
+        StartCoroutine(FadeStart());
     }
 
     public void Retry()
@@ -96,5 +99,20 @@ public class PauseMenu_New : MonoBehaviour
         RetryObj.SetActive(false);
         Cg.saturation.value = 0;
         isPaused = false;
+    }
+
+    IEnumerator FadeStart()
+    {
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-126f, 1f);
+        fadeImageRight.transform.DOLocalMoveX(126f, 1f);
+        yield return new WaitForSeconds(0.3f);
+        loadingText.DOFade(1,1);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Main_Menu_V2");
+        if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
+        {
+            lifeSystem.GetComponent<LifeSystem>().lives--;
+        }
     }
 }
