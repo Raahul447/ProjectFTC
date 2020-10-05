@@ -12,10 +12,13 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
     public bool isTargetPlayStore;
     public bool isTestAd;
 
+    public GameObject lifeSystem;
+
     private void Start()
     {
         Advertisement.AddListener(this);
         InitializeAdvertisement();
+        lifeSystem = GameObject.FindGameObjectWithTag("LifeSystem");
     }
 
     private void InitializeAdvertisement()
@@ -73,6 +76,7 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
             case ShowResult.Finished:
                 if(placementId == rewardedVideoAd)
                 {
+                    lifeSystem.GetComponent<LifeSystem>().lives--;
                     Debug.Log("watched");
                 }
                 break;

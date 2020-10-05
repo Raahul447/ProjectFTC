@@ -49,6 +49,8 @@ public class SwitchCamera_Tutorial : MonoBehaviour
     public GameObject D;
     public GameObject D2;
 
+    public GameObject TTC;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,5 +124,7 @@ public class SwitchCamera_Tutorial : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         anim.enabled = true;
         D2.SetActive(true);
+        yield return new WaitForSeconds(1);
+        TTC.SetActive(true);
     }
 }
