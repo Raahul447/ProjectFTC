@@ -6050,31 +6050,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUi
       objectReference: {fileID: 0}
-    - target: {fileID: 3082622615841569242, guid: db7a50bab3481df4c9175dc1d4bcaf11,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082622615158547715, guid: db7a50bab3481df4c9175dc1d4bcaf11,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082622615158547715, guid: db7a50bab3481df4c9175dc1d4bcaf11,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082622615158547715, guid: db7a50bab3481df4c9175dc1d4bcaf11,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082622615158547715, guid: db7a50bab3481df4c9175dc1d4bcaf11,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3082622615841569246, guid: db7a50bab3481df4c9175dc1d4bcaf11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6909,7 +6884,7 @@ RectTransform:
   m_GameObject: {fileID: 1478728817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 1771038470}
   - {fileID: 1175313091}
@@ -6919,7 +6894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.28, y: 290}
+  m_AnchoredPosition: {x: 7.9, y: 290}
   m_SizeDelta: {x: 70.342, y: 19.26001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478728819
@@ -9338,11 +9313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2086a63f5584cea4ebdbe54b4e5c5618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Menu: {fileID: 1841933498}
-  lvl1: {fileID: 1841933497}
-  lvl6: {fileID: 1841933497}
-  lvl11: {fileID: 1841933497}
-  lvl16: {fileID: 1841933497}
+  Main: {fileID: 0}
+  MainTheme: {fileID: 0}
+  DesertTheme: {fileID: 0}
+  MountainTheme: {fileID: 0}
+  SnowTheme: {fileID: 0}
+  LavaTheme: {fileID: 0}
   levels: 1to5
 --- !u!82 &1841933497
 AudioSource:
@@ -10929,16 +10905,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Directional Light Desert
       objectReference: {fileID: 0}
-    - target: {fileID: 4576027646393827737, guid: cb351572af7048343901e503f5a2dcc3,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576027646393827737, guid: cb351572af7048343901e503f5a2dcc3,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4576027646393827736, guid: cb351572af7048343901e503f5a2dcc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10992,6 +10958,16 @@ PrefabInstance:
     - target: {fileID: 4576027646393827736, guid: cb351572af7048343901e503f5a2dcc3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576027646393827737, guid: cb351572af7048343901e503f5a2dcc3,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576027646393827737, guid: cb351572af7048343901e503f5a2dcc3,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11249,6 +11225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelNumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887945624739670816, guid: 9c1fb1e4dfddc274e898b10bb4983509,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5887945624739670820, guid: 9c1fb1e4dfddc274e898b10bb4983509,
         type: 3}
