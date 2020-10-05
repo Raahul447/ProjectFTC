@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
+using DG.Tweening;
+using TMPro;
 
 public class LevelSelection_Final : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class LevelSelection_Final : MonoBehaviour
     public GameObject[] stars;
 
     public Sprite starsImage;
+
+    [Header("Fade Images")]
+    public Image fadeImageLeft;
+    public Image fadeImageRight;
+
+    [Header("Loading")]
+    public TextMeshProUGUI Loading;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +72,18 @@ public class LevelSelection_Final : MonoBehaviour
     {
         if (unlocked)
         {
-            SceneManager.LoadScene(levelName);
+            StartCoroutine(FadeStart(levelName));
         }
+    }
+
+    IEnumerator FadeStart(string levelName)
+    {
+        yield return new WaitForSeconds(.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-120.69f, 1f);
+        fadeImageRight.transform.DOLocalMoveX(120.69f, 1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(levelName);
     }
 }

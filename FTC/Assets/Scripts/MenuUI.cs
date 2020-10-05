@@ -64,6 +64,13 @@ public class MenuUI : MonoBehaviour
     public bool isLS = false;
     int recentLevel;
 
+    [Header("Fade Images")]
+    public Image fadeImageLeft;
+    public Image fadeImageRight;
+
+    [Header("Loading")]
+    public TextMeshProUGUI Loading;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +89,7 @@ public class MenuUI : MonoBehaviour
             PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);
             LevelSelectObj.DOAnchorPos(new Vector2(-1.5f, 35), 1);
             BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
-            Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
+            Underline.DOAnchorPos(new Vector2(-144.5f, 70f), 0.5f);
 
             //Play_BG.DOFade(1, 1);
             //LS_BG.DOFade(0, 1);
@@ -101,7 +108,7 @@ public class MenuUI : MonoBehaviour
         PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);
         yield return new WaitForSeconds(0.5f);
         BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
-        Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
+        Underline.DOAnchorPos(new Vector2(-144.5f, 70f), 0.5f);
         UnderlineColor.color = new Color32(255, 121, 140, 255);
         PlayB.transform.DOLocalMoveY(0, 1);
         yield return new WaitForSeconds(0.2f);
@@ -113,7 +120,7 @@ public class MenuUI : MonoBehaviour
         PlayObj.DOAnchorPos(new Vector2(-549, 0), 1f);
         CreditsObj.DOAnchorPos(new Vector2(0, 0), 1f);
         SettingsObj.DOAnchorPos(new Vector2(549, 0), 1f);
-        Underline.DOAnchorPos(new Vector2(60, -333.8f), 0.5f);
+        Underline.DOAnchorPos(new Vector2(60, 70f), 0.5f);
         UnderlineColor.color = new Color32(255, 182, 114, 255);
         //PlayB.SetActive(false);
         //Credits_BG.DOFade(1, 1);
@@ -128,7 +135,7 @@ public class MenuUI : MonoBehaviour
         PlayObj.DOAnchorPos(new Vector2(-1098, 0), 1f);
         SettingsObj.DOAnchorPos(new Vector2(0, 0), 1f);
         CreditsObj.DOAnchorPos(new Vector2(-549, 0), 1f);
-        Underline.DOAnchorPos(new Vector2(157, -333.8f), 0.5f);
+        Underline.DOAnchorPos(new Vector2(157, 70f), 0.5f);
         UnderlineColor.color = new Color32(128, 255, 166, 255);
         //PlayB.SetActive(false);
         //Settings_BG.DOFade(1, 1);
@@ -148,7 +155,7 @@ public class MenuUI : MonoBehaviour
         LevelSelectObj.DOAnchorPos(new Vector2(1.5f, -43), 1);
         LSObj.DOAnchorPos(new Vector2(0, 0), 1);
         BottomTab.DOAnchorPos(new Vector2(0, -36.1f), 0.5f);
-        Underline.DOAnchorPosY(-467, 0.5f);
+        Underline.DOAnchorPosY(-38f, 0.5f);
 
         Desert.transform.DOScale(new Vector3(1, 1, 1), 1);
         Mountain.transform.DOScale(new Vector3(1, 1, 1), 1);
@@ -170,7 +177,7 @@ public class MenuUI : MonoBehaviour
         LSObj.DOAnchorPos(new Vector2(549, 0), 1f);
         SettingsObj.DOAnchorPos(new Vector2(2196, 0), 1f);
         CreditsObj.DOAnchorPos(new Vector2(1098, 0), 1f);
-        Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
+        Underline.DOAnchorPos(new Vector2(-144.5f, 70f), 0.5f);
         UnderlineColor.color = new Color32(255, 121, 140, 255);
         PlayB.SetActive(true);
         //Play_BG.DOFade(1, 1);
@@ -187,7 +194,7 @@ public class MenuUI : MonoBehaviour
         PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);
         LevelSelectObj.DOAnchorPos(new Vector2(-1.5f, 35), 1);
         BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
-        Underline.DOAnchorPos(new Vector2(-144.5f, -333.8f), 0.5f);
+        Underline.DOAnchorPos(new Vector2(-144.5f, 70f), 0.5f);
         PlayObj.DOAnchorPos(new Vector2(0, 0), 1);
         LSObj.DOAnchorPos(new Vector2(549, 0), 1);
         CreditsObj.DOAnchorPos(new Vector2(1098, 0), 1f);
@@ -281,6 +288,17 @@ public class MenuUI : MonoBehaviour
 
     public void playbutton()
     {
+        StartCoroutine(FadeImage());
+    }
+
+    IEnumerator FadeImage()
+    {
+        yield return new WaitForSeconds(.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-120.69f, 1f);
+        fadeImageRight.transform.DOLocalMoveX(120.69f, 1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(recentLevel);
     }
 }
