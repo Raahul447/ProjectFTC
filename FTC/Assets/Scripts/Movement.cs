@@ -229,20 +229,20 @@ public class Movement : MonoBehaviour
     public void Shakes()
     {
 
-        if ((Input.GetKeyDown(KeyCode.W) && !canMoveForward))
+        if (((Input.GetKeyDown(KeyCode.W) || SwipeManager.IsSwipingUpRight() || SwipeManager.IsSwipingUp() || SwipeManager.IsSwipingRight()) && !canMoveForward))
         {
             myShaker.Shake(CamShake);
         }
-        else if ((Input.GetKeyDown(KeyCode.A) && !canMoveLeft))
+        else if (((Input.GetKeyDown(KeyCode.A) || SwipeManager.IsSwipingUpLeft()) && !canMoveLeft))
         {
             myShaker.Shake(CamShake);
         }
-        else if ((Input.GetKeyDown(KeyCode.S) && !canMoveBackward))
+        else if (((Input.GetKeyDown(KeyCode.S) || SwipeManager.IsSwipingDownLeft() || SwipeManager.IsSwipingDown() | SwipeManager.IsSwipingLeft()) && !canMoveBackward))
         {
             myShaker.Shake(CamShake);
 
         }
-        else if ((Input.GetKeyDown(KeyCode.D) && !canMoveRight))
+        else if (((Input.GetKeyDown(KeyCode.D) || SwipeManager.IsSwipingDownRight()) && !canMoveRight))
         {
             myShaker.Shake(CamShake);
         }

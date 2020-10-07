@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ExitApp : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ExitApp : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }
