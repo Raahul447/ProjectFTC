@@ -21,10 +21,10 @@ public class AudioManager_V2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DesertTheme = (AudioClip)Resources.Load("SoundEffects/Desert_Theme");
-        MountainTheme = (AudioClip)Resources.Load("SoundEffects/Mountain_Theme");
-        SnowTheme = (AudioClip)Resources.Load("SoundEffects/Mountain_Theme");
-        LavaTheme = (AudioClip)Resources.Load("SoundEffects/Mountain_Theme");
+        DesertTheme = (AudioClip)Resources.Load("Sounds/Desert_Theme");
+        MountainTheme = (AudioClip)Resources.Load("Sounds/Mountain_Theme");
+        SnowTheme = (AudioClip)Resources.Load("Sounds/Snow_Theme");
+        LavaTheme = (AudioClip)Resources.Load("Sounds/Lava_Theme");
         LevelSong();
     }
 
@@ -72,23 +72,23 @@ public class AudioManager_V2 : MonoBehaviour
     {
         if (levels == "Menu")
         {
-            Main.DOFade(0, 3);
+            Main.DOFade(0.05f, 3);
         }
         else if (levels == "Desert")
         {
-            Main.DOFade(0, 3);
+            Main.DOFade(0.05f, 3);
         }
         else if (levels == "Mountain")
         {
-            Main.DOFade(0, 3);
+            Main.DOFade(0.05f, 3);
         }
         else if (levels == "Snow")
         {
-            Main.DOFade(0, 3);
+            Main.DOFade(0.05f, 3);
         }
         else if (levels == "Lava")
         {
-            Main.DOFade(0, 3);
+            Main.DOFade(0.05f, 3);
         }
     }
 

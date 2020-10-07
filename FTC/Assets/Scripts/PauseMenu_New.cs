@@ -28,12 +28,18 @@ public class PauseMenu_New : MonoBehaviour
     [Header("Loading Text")]
     public TextMeshProUGUI loadingText;
 
+    [Header("Ads")]
+    public Ad_Manager Ad;
+
+    public AudioSource Click;
+
     // Start is called before the first frame update
     void Start()
     {
         lifeSystem = GameObject.FindGameObjectWithTag("LifeSystem");
         ppv.profile.TryGetSettings(out Cg);
         ppv.profile.TryGetSettings(out dof);
+        Click = this.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,21 +54,27 @@ public class PauseMenu_New : MonoBehaviour
         if (isPaused)
         {
             PauseMask.transform.DOLocalMoveY(-100, 0.4f);
+            Click.Play();
+            Ad.PlayBannerAd();
         }
         else
         {
+            Click.Play();
             PauseMask.transform.DOLocalMoveY(2, 0.4f);
+            Ad.HideBannerAd();
         }
     }
 
     public void Exit()
     {
+        //Click.Play();
         ExitObj.SetActive(true);
         ExitObj.transform.DOLocalMoveY(10, 0.5f);
     }
 
     public void NoButton()
     {
+        //Click.Play();
         PauseMask.transform.DOLocalMoveY(2, 0.4f);
         ExitObj.transform.DOLocalMoveY(-38, 0.5f);
         isPaused = false;
@@ -71,11 +83,13 @@ public class PauseMenu_New : MonoBehaviour
 
     public void YesButton()
     {
+        Click.Play();
         StartCoroutine(FadeStart());
     }
 
     public void Retry()
     {
+        //Click.Play();
         Scene loadedLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene(loadedLevel.buildIndex);
         if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
@@ -87,6 +101,7 @@ public class PauseMenu_New : MonoBehaviour
 
     public void RetryButton()
     {
+        //Click.Play();
         RetryObj.SetActive(true);
         RetryObj.transform.DOLocalMoveY(10, 0.5f);
         Cg.saturation.value = -100;
@@ -94,6 +109,7 @@ public class PauseMenu_New : MonoBehaviour
 
     public void RetryNo()
     {
+        //Click.Play();
         PauseMask.transform.DOLocalMoveY(2, 0.4f);
         RetryObj.transform.DOLocalMoveY(-38, 0.5f);
         RetryObj.SetActive(false);

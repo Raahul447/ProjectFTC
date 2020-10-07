@@ -44,8 +44,8 @@ public class CubesTypes : MonoBehaviour
     public ScoreEntrance Se;
 
     [Header("Audio Sources")]
-    //public AudioSource AS;
-    //public AudioManager_V2 AM;
+    public AudioSource Effects_AS;
+    public AudioManager_V2 BG_AS;
 
     [Header("Audio Clips")]
     public AudioClip Switches;
@@ -58,10 +58,10 @@ public class CubesTypes : MonoBehaviour
         Ct = GetComponent<CubesTypes>();
         ppv.profile.TryGetSettings(out dof);
         rendy = GetComponent<Renderer>();
-        //AS = GameObject.FindGameObjectWithTag("AS").GetComponent<AudioSource>();
-        //AM = GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager_V2>();
-        Portals = (AudioClip)Resources.Load("SoundEffects/Portals_Tumble");
-        Switches = (AudioClip)Resources.Load("SoundEffects/Switch_Tumble");
+        Effects_AS = GameObject.FindGameObjectWithTag("Effects").GetComponent<AudioSource>();
+        BG_AS = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
+        Portals = (AudioClip)Resources.Load("SoundEffects/PortalsTumble_The_Game");
+        Switches = (AudioClip)Resources.Load("SoundEffects/Activate_SwitchTumble_The_Game");
         Final = (AudioClip)Resources.Load("SoundEffects/Level_ClearTumble");
     }
 
@@ -84,7 +84,7 @@ public class CubesTypes : MonoBehaviour
                 if (!isTeleport)
                 {
                     Ct.isTeleport = false;
-                    //AS.PlayOneShot(Portals, 0.7f);
+                    Effects_AS.PlayOneShot(Portals, 0.7f);
                     StartCoroutine(Teleport());
                 }
             }
@@ -98,15 +98,16 @@ public class CubesTypes : MonoBehaviour
             }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "Pillar")
             {
-                //AS.PlayOneShot(Switches, 0.3f);
+                Effects_AS.PlayOneShot(Switches, 0.3f);
                 isStep = true;
                 GetComponent<Renderer>().material.color = new Color32(159, 159, 159, 255);
             }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
             {
                 StartCoroutine(NextLevelLoad());
-                //AM.endFade();
-                //AS.PlayOneShot(Final, 0.4f);
+                BG_AS.endFade();
+                //AS.clip = Final;
+                Effects_AS.PlayOneShot(Final, 0.4f);
                 if (Mv._Moves <= ThreeStars)
                 {
                     //_nextLevel.SetTrigger("3s");

@@ -18,6 +18,8 @@ public class GameOver : MonoBehaviour
 
     public InGameUi IG;
 
+    public LifeSystem Ls;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -47,10 +47,16 @@ public class Movement : MonoBehaviour
 
     public AudioSource pSound;
 
+    public LifeSystem Ls;
+
+    public RefillLives TryAgainLives;
+
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
         Mv2 = GameObject.Find("Player").GetComponent<Movement2>();
+        Ls = GameObject.Find("Life System").GetComponent<LifeSystem>();
+        //GO = GameObject.Find("GameOverCanvas").GetComponent<GameOver>();
         //pSound = GameObject.Find("Player").GetComponent<AudioSource>();
         //lives = GameObject.FindGameObjectWithTag("LifeSystem");
     }
@@ -79,8 +85,18 @@ public class Movement : MonoBehaviour
         else if(_Moves > CT.OneStar)
         {
             Score.text = "0";
-            GO.enabled = true;
-            Mv2.enabled = true;
+            if (Ls.currentLives <= 1)
+            {
+                TryAgainLives.enabled = true;
+                Mv2.enabled = true;
+                Debug.Log("No");
+            }
+            else if (Ls.currentLives > 0)
+            {
+                GO.enabled = true;
+                Mv2.enabled = true;
+                Debug.Log("YEs");
+            }
         }
 
     }

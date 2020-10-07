@@ -23,6 +23,10 @@ public class LifeSystem : MonoBehaviour
     private DateTime timeOfPause;
     public HeartsSystem Hs;
 
+    [Header("Audio")]
+    public AudioSource recievedLife;
+    public AudioSource lostLife;
+
     void Start()
     {
         Hs = GameObject.Find("HeartsLives").GetComponent<HeartsSystem>();
@@ -69,6 +73,7 @@ public class LifeSystem : MonoBehaviour
             if (timerForLife > lifeReplenishTime)
             {
                 lives++;
+                recievedLife.Play();
                 timerForLife = 0;
 
                 if(lives == 3)
@@ -85,8 +90,12 @@ public class LifeSystem : MonoBehaviour
                 }
             }
         }
-
         //livesText.text = currentLives.ToString();
+    }
+
+    public void LostLife()
+    {
+        lostLife.Play();
     }
 
     void UpdateLives(double timerToAdd)

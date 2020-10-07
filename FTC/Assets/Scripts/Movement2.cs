@@ -27,14 +27,17 @@ public class Movement2 : MonoBehaviour
         if(Ls.lives == 2)
         {
             Hs.TwoLivesRemove();
+            Ls.LostLife();
         }
         else if(Ls.lives == 1)
         {
             Hs.OneLivesRemove();
+            Ls.LostLife();
         }
         else if(Ls.lives == 0)
         {
             Hs.ZeroLivesRemove();
+            Ls.LostLife();
         }
     }
 

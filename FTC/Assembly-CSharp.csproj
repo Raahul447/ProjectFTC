@@ -101,6 +101,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scenes\Rohit Test\Teleport Effect v1.0\Portal Particle\Scrpt\CameraHolder.cs" />
+    <Compile Include="Assets\Scripts\Ad_Manager.cs" />
     <Compile Include="Assets\Scripts\Block_Spawn.cs" />
     <Compile Include="Assets\Scripts\Cam_DoTween.cs" />
     <Compile Include="Assets\Scripts\CamShake.cs" />
@@ -144,12 +145,15 @@
     <Compile Include="Assets\Scripts\PlayerStart.cs" />
     <Compile Include="Assets\Scripts\Porta_Tutorial.cs" />
     <Compile Include="Assets\Scripts\Random.cs" />
+    <Compile Include="Assets\Scripts\RefillLives.cs" />
+    <Compile Include="Assets\Scripts\RL_Menu.cs" />
     <Compile Include="Assets\Scripts\ScoreCal.cs" />
     <Compile Include="Assets\Scripts\ScoreEntrance.cs" />
     <Compile Include="Assets\Scripts\ScrollingEffect.cs" />
     <Compile Include="Assets\Scripts\ScrollSnapRect.cs" />
     <Compile Include="Assets\Scripts\SequencePillar.cs" />
     <Compile Include="Assets\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\StopMove.cs" />
     <Compile Include="Assets\Scripts\Sub_Back.cs" />
     <Compile Include="Assets\Scripts\SwipeManager.cs" />

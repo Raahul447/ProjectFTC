@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 3083836571037491760}
   - component: {fileID: 3083836571037491772}
   - component: {fileID: 2246645797439491437}
-  - component: {fileID: 1795219039}
-  - component: {fileID: 1795219041}
+  - component: {fileID: 583828162}
+  - component: {fileID: 583828163}
+  - component: {fileID: 583828164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -119,10 +120,13 @@ MonoBehaviour:
   myShaker: {fileID: 0}
   CamShake: {fileID: 11400000, guid: bd4328bd5427ab74383676e7049ce3d3, type: 2}
   CT: {fileID: 0}
-  GO: {fileID: 1795219039}
+  GO: {fileID: 583828163}
   Hearts: []
-  Mv2: {fileID: 0}
+  Mv2: {fileID: 583828162}
   PN: {fileID: 0}
+  pSound: {fileID: 0}
+  Ls: {fileID: 0}
+  TryAgainLives: {fileID: 583828164}
 --- !u!54 &2246645797439491437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,9 +141,25 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &1795219039
+--- !u!114 &583828162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083836571037491766}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e96166d44467224885a32aa25594e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mv: {fileID: 3083836571037491772}
+  Ct: {fileID: 0}
+  Ls: {fileID: 0}
+  Hs: {fileID: 0}
+--- !u!114 &583828163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,7 +175,8 @@ MonoBehaviour:
   player: {fileID: 3083836571037491772}
   GameOverObj: {fileID: 0}
   IG: {fileID: 0}
---- !u!114 &1795219041
+  Ls: {fileID: 0}
+--- !u!114 &583828164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,10 +185,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3083836571037491766}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e96166d44467224885a32aa25594e09, type: 3}
+  m_Script: {fileID: 11500000, guid: 24104395627158740adad2d7d57ca179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mv: {fileID: 0}
-  Ct: {fileID: 0}
+  ppv: {fileID: 0}
+  player: {fileID: 3083836571037491772}
+  RL: {fileID: 0}
+  IG: {fileID: 0}
   Ls: {fileID: 0}
-  Hs: {fileID: 0}
