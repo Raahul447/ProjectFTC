@@ -18,9 +18,12 @@ public class AudioManager_V2 : MonoBehaviour
 
     public string levels;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
+        MainTheme = (AudioClip)Resources.Load("Sounds/Tumble Theme");
         DesertTheme = (AudioClip)Resources.Load("Sounds/Desert_Theme");
         MountainTheme = (AudioClip)Resources.Load("Sounds/Mountain_Theme");
         SnowTheme = (AudioClip)Resources.Load("Sounds/Snow_Theme");
@@ -40,7 +43,7 @@ public class AudioManager_V2 : MonoBehaviour
         {
             Main.clip = MainTheme;
             Main.Play();
-            Main.DOFade(0.3f, 10);
+            Main.DOFade(0.5f, 10);
         }
         else if(this.gameObject.tag == "Desert")
         {

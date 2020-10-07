@@ -71,6 +71,9 @@ public class MenuUI : MonoBehaviour
     [Header("Loading")]
     public TextMeshProUGUI Loading;
 
+    [Header("Hearts")]
+    public RectTransform Hearts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +107,7 @@ public class MenuUI : MonoBehaviour
         LineObject.DOScaleX(0.9998868f, 2);
         yield return new WaitForSeconds(0.8f);
         TumbleText.DOAnchorPos(new Vector2(-10.3f, -35), 1f);
+        Hearts.DOAnchorPos(new Vector2(-54.60001f, -27.60001f),1);
         yield return new WaitForSeconds(1);
         PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);
         yield return new WaitForSeconds(0.5f);
@@ -199,7 +203,7 @@ public class MenuUI : MonoBehaviour
         LSObj.DOAnchorPos(new Vector2(549, 0), 1);
         CreditsObj.DOAnchorPos(new Vector2(1098, 0), 1f);
         SettingsObj.DOAnchorPos(new Vector2(2196, 0), 1f);
-
+        UnderlineColor.color = new Color32(255, 121, 140, 255);
         Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
         Mountain.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
         Ice.transform.DOScale(new Vector3(0, 0, 0), 0.5f);

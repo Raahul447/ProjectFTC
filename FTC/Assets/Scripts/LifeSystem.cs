@@ -90,6 +90,11 @@ public class LifeSystem : MonoBehaviour
                 }
             }
         }
+
+        if(currentLives > maxLives)
+        {
+            currentLives = maxLives;
+        }
         //livesText.text = currentLives.ToString();
     }
 

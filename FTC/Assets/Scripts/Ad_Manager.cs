@@ -91,7 +91,8 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
             case ShowResult.Finished:
                 if(placementId == rewardedVideoAd)
                 {
-                    lifeSystem.GetComponent<LifeSystem>().lives++;
+                    lifeSystem.GetComponent<LifeSystem>().lives += 1;
+                    lifeSystem.GetComponent<LifeSystem>().timerForLife = 0f;
                     Scene loadedLevel = SceneManager.GetActiveScene();
                     SceneManager.LoadScene(loadedLevel.buildIndex);
                     //Debug.Log("watched");
