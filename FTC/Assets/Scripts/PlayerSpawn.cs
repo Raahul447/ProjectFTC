@@ -5,27 +5,22 @@ using DG.Tweening;
 
 public class PlayerSpawn : MonoBehaviour
 {
-    private GameObject player;
+    [Header("Player")]
+    public GameObject[] Player;
+    public float spawn_Timer;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(SpawnPlayer());
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    IEnumerator SpawnPlayer()
     {
-        if (player)
+        yield return new WaitForSeconds(spawn_Timer);
+        foreach(GameObject player in Player)
         {
-            player.GetComponent<Movement>().enabled = false;
-            StartCoroutine(movePlayer());
+            player.transform.DOScale(2, 0.3f);
         }
-    }
-
-    IEnumerator movePlayer()
-    {
-        yield return new WaitForSeconds(1f);
-        player.GetComponent<Rigidbody>().isKinematic = false;
+        yield return new WaitForSeconds(0.5f);
     }
 }
