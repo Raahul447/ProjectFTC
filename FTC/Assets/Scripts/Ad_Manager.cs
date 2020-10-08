@@ -77,7 +77,7 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsDidStart(string placementId)
     {
         //throw new System.NotImplementedException();
-        //pls mute audio
+        AudioListener.volume = 0f;
     }
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
@@ -93,6 +93,7 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
                 {
                     lifeSystem.GetComponent<LifeSystem>().lives += 1;
                     lifeSystem.GetComponent<LifeSystem>().timerForLife = 0f;
+                    AudioListener.volume = 1f;
                     Scene loadedLevel = SceneManager.GetActiveScene();
                     SceneManager.LoadScene(loadedLevel.buildIndex);
                     //Debug.Log("watched");

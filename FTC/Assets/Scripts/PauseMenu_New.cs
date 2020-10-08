@@ -33,6 +33,10 @@ public class PauseMenu_New : MonoBehaviour
 
     public AudioSource Click;
 
+    public bool isMute = false;
+
+    public Image audioLogo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,28 @@ public class PauseMenu_New : MonoBehaviour
         {
             ExitObj.SetActive(true);
             ExitObj.transform.DOLocalMoveY(10, 0.5f);
+        }
+
+        if(AudioListener.volume == 0)
+        {
+            audioLogo.sprite = Resources.Load<Sprite>("Images/Mute");
+        }
+        else
+        {
+            audioLogo.sprite = Resources.Load<Sprite>("Images/UnMute");
+        }
+    }
+
+    public void Mute()
+    {
+        isMute = !isMute;
+        if (isMute)
+        {
+            AudioListener.volume = 0;
+        }
+        else
+        {
+            AudioListener.volume = 1;
         }
     }
 

@@ -229,22 +229,26 @@ public class Movement : MonoBehaviour
     public void Shakes()
     {
 
-        if (((Input.GetKeyDown(KeyCode.W) || SwipeManager.IsSwipingUpRight() || SwipeManager.IsSwipingUp() || SwipeManager.IsSwipingRight()) && !canMoveForward))
+        if ((Input.GetKeyDown(KeyCode.W) || SwipeManager.IsSwipingUpRight() || SwipeManager.IsSwipingUp() || SwipeManager.IsSwipingRight()) && !canMoveForward)
         {
             myShaker.Shake(CamShake);
+            Handheld.Vibrate();
         }
-        else if (((Input.GetKeyDown(KeyCode.A) || SwipeManager.IsSwipingUpLeft()) && !canMoveLeft))
+        else if ((Input.GetKeyDown(KeyCode.A) || SwipeManager.IsSwipingUpLeft()) && !canMoveLeft)
         {
             myShaker.Shake(CamShake);
+            Handheld.Vibrate();
         }
-        else if (((Input.GetKeyDown(KeyCode.S) || SwipeManager.IsSwipingDownLeft() || SwipeManager.IsSwipingDown() | SwipeManager.IsSwipingLeft()) && !canMoveBackward))
+        else if ((Input.GetKeyDown(KeyCode.S) || SwipeManager.IsSwipingDownLeft() || SwipeManager.IsSwipingDown() || SwipeManager.IsSwipingLeft()) && !canMoveBackward)
         {
             myShaker.Shake(CamShake);
+            Handheld.Vibrate();
 
         }
-        else if (((Input.GetKeyDown(KeyCode.D) || SwipeManager.IsSwipingDownRight()) && !canMoveRight))
+        else if ((Input.GetKeyDown(KeyCode.D) || SwipeManager.IsSwipingDownRight()) && !canMoveRight)
         {
             myShaker.Shake(CamShake);
+            Handheld.Vibrate();
         }
     }
 } 

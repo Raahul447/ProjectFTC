@@ -73,12 +73,14 @@ public class MenuUI : MonoBehaviour
 
     [Header("Hearts")]
     public RectTransform Hearts;
+    public LifeSystem LifeSystem;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StartUI());
         recentLevel = PlayerPrefs.GetInt("levelAt", 1);
+        LifeSystem = GameObject.Find("Life System").GetComponent<LifeSystem>();
     }
 
     // Update is called once per frame
@@ -262,6 +264,16 @@ public class MenuUI : MonoBehaviour
         Main.GetComponent<Renderer>().material = S;
     }
 
+    public void Mute()
+    {
+        AudioListener.volume = 0f;
+    }
+
+    public void unMute()
+    {
+        AudioListener.volume = 1f;
+    }
+
     IEnumerator SS()
     {
         Desert.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
@@ -292,7 +304,10 @@ public class MenuUI : MonoBehaviour
 
     public void playbutton()
     {
-        StartCoroutine(FadeImage());
+        if(LifeSystem.lives > 0)
+        {
+            StartCoroutine(FadeImage());
+        }
     }
 
     IEnumerator FadeImage()
