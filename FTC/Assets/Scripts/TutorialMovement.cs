@@ -57,22 +57,22 @@ public class TutorialMovement : MonoBehaviour
         // Get the rotation, if any
         float x = 0f, z = 0f;
 
-        //Down
-        if (SwipeManager.IsSwipingDownLeft())
-        {
-            x = -90f;
-            transform.position += Vector3.back * 2;
-        }
+        ////Down
+        //if (SwipeManager.IsSwipingDownLeft())
+        //{
+        //    x = -90f;
+        //    transform.position += Vector3.back * 2;
+        //}
+
+        ////Up
+        //if (SwipeManager.IsSwipingUpRight())
+        //{
+        //    x = 90f;
+        //    transform.position += Vector3.forward * 2;
+        //}
 
         //Up
-        if (SwipeManager.IsSwipingUpRight())
-        {
-            x = 90f;
-            transform.position += Vector3.forward * 2;
-        }
-
-        //Up
-        if (Input.GetKeyDown(KeyCode.W) && isFront)
+        if ((Input.GetKeyDown(KeyCode.W) || SwipeManager.IsSwipingUpRight()) && isFront)
         {
             //print("Forward");
             x = 90f;
@@ -80,7 +80,7 @@ public class TutorialMovement : MonoBehaviour
             count += 1;
         }
         //Down
-        else if (Input.GetKeyDown(KeyCode.S) && isBack)
+        else if ((Input.GetKeyDown(KeyCode.S) || SwipeManager.IsSwipingDownLeft()) && isBack)
         {
             //print("Back");
             x = -90f;
@@ -101,12 +101,12 @@ public class TutorialMovement : MonoBehaviour
     public void Shakes()
     {
 
-        if ((Input.GetKeyDown(KeyCode.W) && !isFront))
+        if ((Input.GetKeyDown(KeyCode.W) || SwipeManager.IsSwipingUpRight()) && !isFront)
         {
             myShaker.Shake(CamShake);
 
         }
-        else if ((Input.GetKeyDown(KeyCode.S) && !isBack))
+        else if ((Input.GetKeyDown(KeyCode.S) || SwipeManager.IsSwipingDownLeft()) && !isBack)
         {
             myShaker.Shake(CamShake);
             Debug.Log("Shake");

@@ -27,7 +27,7 @@ public class AudioManager_V2 : MonoBehaviour
         DesertTheme = (AudioClip)Resources.Load("Sounds/Desert_Theme");
         MountainTheme = (AudioClip)Resources.Load("Sounds/Mountain_Theme");
         SnowTheme = (AudioClip)Resources.Load("Sounds/Snow_Theme");
-        LavaTheme = (AudioClip)Resources.Load("Sounds/Lava_Theme");
+        LavaTheme = (AudioClip)Resources.Load("Sounds/Lava_ThemeTumble_The_Game (2)");
         LevelSong();
     }
 

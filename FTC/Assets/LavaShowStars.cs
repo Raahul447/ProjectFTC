@@ -22,7 +22,7 @@ public class LavaShowStars : MonoBehaviour
     public void UpdateStars()
     {
         int sum = 0;
-        for (int i = 1; i>15 && i<=20; i++)
+        for (int i = 16; i>15 && i==20; i++)
         {
             sum += PlayerPrefs.GetInt("Lv" + i.ToString());
         }

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class DeleteData : MonoBehaviour
 {
+    
+     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,7 @@ public class DeleteData : MonoBehaviour
     public void DeletePrefs()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("levelAt", 2);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

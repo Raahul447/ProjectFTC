@@ -22,7 +22,7 @@ public class MountainShowStars : MonoBehaviour
     public void UpdateStars()
     {
         int sum = 0;
-        for (int i = 1; i > 5 && i <= 10; i++)
+        for (int i = 6; i > 5 && i < 11; i++)
         {
             sum += PlayerPrefs.GetInt("Lv" + i.ToString());
         }

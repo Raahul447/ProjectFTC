@@ -84,7 +84,7 @@ public class CubesTypes : MonoBehaviour
                 if (!isTeleport)
                 {
                     Ct.isTeleport = false;
-                    Effects_AS.PlayOneShot(Portals, 0.7f);
+                    Effects_AS.PlayOneShot(Portals, 0.4f);
                     StartCoroutine(Teleport());
                 }
             }
@@ -107,7 +107,7 @@ public class CubesTypes : MonoBehaviour
                 StartCoroutine(NextLevelLoad());
                 BG_AS.endFade();
                 //AS.clip = Final;
-                Effects_AS.PlayOneShot(Final, 0.4f);
+                Effects_AS.PlayOneShot(Final, 0.2f);
                 if (Mv._Moves <= ThreeStars)
                 {
                     //_nextLevel.SetTrigger("3s");

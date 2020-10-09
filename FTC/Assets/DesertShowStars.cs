@@ -17,7 +17,7 @@ public class DesertShowStars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //UpdateStars();
     }
 
     public void UpdateStars()

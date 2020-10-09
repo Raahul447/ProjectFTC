@@ -22,7 +22,7 @@ public class IceShowStars : MonoBehaviour
     public void UpdateStars()
     {
         int sum = 0;
-        for (int i = 1; i>10 && i<=15; i++)
+        for (int i = 11; i>10 && i<16; i++)
         {
             sum += PlayerPrefs.GetInt("Lv" + i.ToString());
         }
