@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8434063510986628278}
   m_Layer: 0
   m_Name: Effects_AS
-  m_TagString: Untagged
+  m_TagString: Effects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +75,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 813481670032612021, guid: 3e166e734bfcac2438e82d2b04c14b86,
         type: 3}
       propertyPath: m_TagString
-      value: Menu
+      value: Desert
       objectReference: {fileID: 0}
     - target: {fileID: 813481670032612019, guid: 3e166e734bfcac2438e82d2b04c14b86,
         type: 3}
@@ -262,6 +262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_AS
       objectReference: {fileID: 0}
+    - target: {fileID: 3508670819587937792, guid: b4f5de71c389f2e42a7b4bdee75c12ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: BG
+      objectReference: {fileID: 0}
     - target: {fileID: 3508670819587937794, guid: b4f5de71c389f2e42a7b4bdee75c12ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,6 +326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Volume
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508670819587937793, guid: b4f5de71c389f2e42a7b4bdee75c12ef,
+        type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f5de71c389f2e42a7b4bdee75c12ef, type: 3}
