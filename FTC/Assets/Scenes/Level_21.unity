@@ -970,6 +970,11 @@ PrefabInstance:
       propertyPath: RL
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3083836571037491761, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b55e143d5b39e440b5d29497a21cae1, type: 2}
     - target: {fileID: 1795219039, guid: 322c1995bb160d2419156841121693e8, type: 3}
       propertyPath: ppv
       value: 
@@ -1644,6 +1649,11 @@ PrefabInstance:
       propertyPath: RL
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3083836571037491761, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: af534df588108254dba8b91d856ee241, type: 2}
     - target: {fileID: 1795219039, guid: 322c1995bb160d2419156841121693e8, type: 3}
       propertyPath: ppv
       value: 
@@ -1785,6 +1795,11 @@ PrefabInstance:
       propertyPath: RL
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3083836571037491761, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da2653aa5e9af0943afb723c7e517883, type: 2}
     - target: {fileID: 1795219039, guid: 322c1995bb160d2419156841121693e8, type: 3}
       propertyPath: ppv
       value: 
@@ -2467,6 +2482,11 @@ PrefabInstance:
       propertyPath: RL
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3083836571037491761, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 041e026c2c338d84d872a7e1fe252c2d, type: 2}
     - target: {fileID: 1795219039, guid: 322c1995bb160d2419156841121693e8, type: 3}
       propertyPath: ppv
       value: 
@@ -2531,7 +2551,6 @@ MonoBehaviour:
   welcomeAnim: {fileID: 0}
   isFront: 1
   isBack: 1
-  cube2: {fileID: 0}
 --- !u!1 &1841933495
 GameObject:
   m_ObjectHideFlags: 0

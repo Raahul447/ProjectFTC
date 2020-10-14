@@ -2935,6 +2935,11 @@ PrefabInstance:
       propertyPath: ppv
       value: 
       objectReference: {fileID: 729904809}
+    - target: {fileID: 3083836571037491761, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: af534df588108254dba8b91d856ee241, type: 2}
     - target: {fileID: 2246645797439491437, guid: 322c1995bb160d2419156841121693e8,
         type: 3}
       propertyPath: m_Constraints
