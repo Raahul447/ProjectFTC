@@ -4010,6 +4010,11 @@ PrefabInstance:
       propertyPath: Ls
       value: 
       objectReference: {fileID: 1701776195}
+    - target: {fileID: 3083836571037491761, guid: 322c1995bb160d2419156841121693e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 041e026c2c338d84d872a7e1fe252c2d, type: 2}
     - target: {fileID: 2246645797439491437, guid: 322c1995bb160d2419156841121693e8,
         type: 3}
       propertyPath: m_Constraints
