@@ -114,6 +114,7 @@ public class PauseMenu_New : MonoBehaviour
     public void YesButton()
     {
         Click.Play();
+        Ad.HideBannerAd();
         StartCoroutine(FadeStart());
     }
 

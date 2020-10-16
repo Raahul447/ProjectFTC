@@ -89,11 +89,29 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
             case ShowResult.Skipped:
                 break;
             case ShowResult.Finished:
+                if(placementId == interstitialAd)
+                {
+                    if (AudioListener.volume == 0)
+                    {
+                        AudioListener.volume = 0f;
+                    }
+                    else
+                    {
+                        AudioListener.volume = 1f;
+                    }
+                }
                 if(placementId == rewardedVideoAd)
                 {
                     lifeSystem.GetComponent<LifeSystem>().lives = lifeSystem.GetComponent<LifeSystem>().maxLives;
                     lifeSystem.GetComponent<LifeSystem>().timerForLife = 0f;
-                    AudioListener.volume = 1f;
+                    if (AudioListener.volume == 0)
+                    {
+                        AudioListener.volume = 0f;
+                    }
+                    else
+                    {
+                        AudioListener.volume = 1f;
+                    }
                     Scene loadedLevel = SceneManager.GetActiveScene();
                     SceneManager.LoadScene(loadedLevel.buildIndex);
                     //Debug.Log("watched");

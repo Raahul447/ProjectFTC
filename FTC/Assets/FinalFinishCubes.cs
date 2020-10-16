@@ -24,6 +24,7 @@ public class FinalFinishCubes : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(FinalMove());
+        PlayerPrefs.SetInt("levelAt", 22);
     }
 
     IEnumerator FinalMove()

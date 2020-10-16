@@ -79,7 +79,7 @@ public class MenuUI : MonoBehaviour
     void Start()
     {
         StartCoroutine(StartUI());
-        recentLevel = PlayerPrefs.GetInt("levelAt", 1);
+        recentLevel = PlayerPrefs.GetInt("levelAt", 3);
         LifeSystem = GameObject.Find("Life System").GetComponent<LifeSystem>();
     }
 
