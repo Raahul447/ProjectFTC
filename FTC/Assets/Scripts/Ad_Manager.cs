@@ -17,6 +17,8 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
 
     public GameObject lifeSystem;
 
+    public bool isMute = false;
+
     private void Start()
     {
         Advertisement.AddListener(this);
@@ -91,7 +93,7 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
             case ShowResult.Finished:
                 if(placementId == interstitialAd)
                 {
-                    if (AudioListener.volume == 0)
+                    if (isMute)
                     {
                         AudioListener.volume = 0f;
                     }
@@ -104,7 +106,10 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
                 {
                     lifeSystem.GetComponent<LifeSystem>().lives = lifeSystem.GetComponent<LifeSystem>().maxLives;
                     lifeSystem.GetComponent<LifeSystem>().timerForLife = 0f;
-                    if (AudioListener.volume == 0)
+                    Scene loadedLevel = SceneManager.GetActiveScene();
+                    SceneManager.LoadScene(loadedLevel.buildIndex);
+                    //Debug.Log("watched");
+                    if (isMute)
                     {
                         AudioListener.volume = 0f;
                     }
@@ -112,9 +117,6 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
                     {
                         AudioListener.volume = 1f;
                     }
-                    Scene loadedLevel = SceneManager.GetActiveScene();
-                    SceneManager.LoadScene(loadedLevel.buildIndex);
-                    //Debug.Log("watched");
                 }
                 break;
         }

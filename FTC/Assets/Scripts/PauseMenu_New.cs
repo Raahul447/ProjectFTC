@@ -76,6 +76,7 @@ public class PauseMenu_New : MonoBehaviour
         {
             AudioListener.volume = 1;
         }
+        adButton();
     }
 
     public void Pause()
@@ -116,6 +117,11 @@ public class PauseMenu_New : MonoBehaviour
         Click.Play();
         Ad.HideBannerAd();
         StartCoroutine(FadeStart());
+    }
+
+    public void adButton()
+    {
+        Ad.isMute = true;
     }
 
     public void Retry()
