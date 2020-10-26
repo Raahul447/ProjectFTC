@@ -20,11 +20,12 @@ public class LevelSelection_Final : MonoBehaviour
 
     [Header("Loading")]
     public TextMeshProUGUI Loading;
+    public AudioManager_V2 Am;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Am = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
     }
 
     // Update is called once per frame
@@ -78,6 +79,7 @@ public class LevelSelection_Final : MonoBehaviour
 
     IEnumerator FadeStart(string levelName)
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(.3f);
         fadeImageLeft.transform.DOLocalMoveX(-120.69f, 1f);
         fadeImageRight.transform.DOLocalMoveX(120.69f, 1f);

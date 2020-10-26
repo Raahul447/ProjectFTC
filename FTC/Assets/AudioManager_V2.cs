@@ -60,7 +60,7 @@ public class AudioManager_V2 : MonoBehaviour
         {
             Main.clip = MainTheme;
             Main.Play();
-            Main.DOFade(0.5f, 10);
+            Main.DOFade(0.5f, 5);
         }
         else if(this.gameObject.tag == "Desert")
         {

@@ -42,13 +42,14 @@ public class ScoreEntrance : MonoBehaviour
 
     [Header("Loading")]
     public TextMeshProUGUI Loading;
-
+    public AudioManager_V2 Am;
 
     // Start is called before the first frame update
     void Start()
     {
         //StartCoroutine(StartLevel1());
         //Ls = GameObject.FindGameObjectWithTag("LifeSystem");
+        Am = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
     }
 
     // Update is called once per frame
@@ -171,6 +172,7 @@ public class ScoreEntrance : MonoBehaviour
 
     IEnumerator FadeNextLevel()
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);
@@ -182,6 +184,7 @@ public class ScoreEntrance : MonoBehaviour
 
     IEnumerator FadeRetry()
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);
@@ -193,6 +196,7 @@ public class ScoreEntrance : MonoBehaviour
 
     IEnumerator FadeHome()
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);

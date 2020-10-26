@@ -50,12 +50,14 @@ public class Movement : MonoBehaviour
     public LifeSystem Ls;
 
     public RefillLives TryAgainLives;
+    public Ad_Manager Am;
 
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
         Mv2 = GameObject.Find("Player").GetComponent<Movement2>();
         Ls = GameObject.Find("Life System").GetComponent<LifeSystem>();
+        Am = GameObject.Find("AdManager").GetComponent<Ad_Manager>();
         //GO = GameObject.Find("GameOverCanvas").GetComponent<GameOver>();
         //pSound = GameObject.Find("Player").GetComponent<AudioSource>();
         //lives = GameObject.FindGameObjectWithTag("LifeSystem");
@@ -168,6 +170,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                Am.HideBannerAd();
                 //pSound.Play();
             }
         }
@@ -182,6 +185,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                Am.HideBannerAd();
                 //pSound.Play();
             }
         }
@@ -196,6 +200,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                Am.HideBannerAd();
                 //pSound.Play();
             }
         }
@@ -210,6 +215,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
+                Am.HideBannerAd();
                 //pSound.Play();
             }
         }

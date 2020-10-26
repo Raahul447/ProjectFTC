@@ -22,6 +22,8 @@ public class CubeStart : MonoBehaviour
 
     public void scaleSpawn()
     {
+        PlayerPrefs.SetInt("volume", 1);
+        PlayerPrefs.SetInt("levelAt", 3);
         cube.transform.DOScale(new Vector3(2, 2, 2), 0.5f);
         TM.enabled = true;
     }

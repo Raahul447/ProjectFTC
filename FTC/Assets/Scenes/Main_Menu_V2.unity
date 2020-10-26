@@ -1230,6 +1230,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &94353649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3139,6 +3140,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &168671032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4715,6 +4717,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &247488813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5149,6 +5152,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &265025463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6218,6 +6222,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &312556625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6401,6 +6406,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &326884036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8811,6 +8817,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &552967247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9576,6 +9583,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &630548291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10896,7 +10904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -144.5, y: -17.000015}
+  m_AnchoredPosition: {x: -144.5, y: -17}
   m_SizeDelta: {x: 133.96, y: 44.679993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704561314
@@ -12308,6 +12316,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &769510056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13452,11 +13461,16 @@ MonoBehaviour:
   LvlSlct: {fileID: 1442154402}
   PlayB: {fileID: 208862007}
   isLS: 0
+  recentLevel: 0
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
   Hearts: {fileID: 1286280138}
   LifeSystem: {fileID: 0}
+  Am: {fileID: 0}
+  volume: 0
+  Red: {fileID: 276323385}
+  Green: {fileID: 2131320594}
 --- !u!1 &844447928
 GameObject:
   m_ObjectHideFlags: 0
@@ -14858,6 +14872,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &933686859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15314,6 +15329,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &984824563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17205,6 +17221,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1175440435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19205,7 +19222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -54.600006, y: 30.000015}
+  m_AnchoredPosition: {x: -54.600006, y: 30}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1286280139
@@ -20646,6 +20663,7 @@ GameObject:
   - component: {fileID: 1419237579}
   - component: {fileID: 1419237581}
   - component: {fileID: 1419237580}
+  - component: {fileID: 1419237582}
   m_Layer: 5
   m_Name: LoadingText
   m_TagString: Untagged
@@ -20791,6 +20809,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419237578}
   m_CullTransparentMesh: 0
+--- !u!225 &1419237582
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419237578}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1422456974
 GameObject:
   m_ObjectHideFlags: 0
@@ -21666,6 +21696,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1498484343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22369,6 +22400,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1529744319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23113,6 +23145,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1574265261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24740,6 +24773,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1687324570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25608,6 +25642,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1788392074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26735,6 +26770,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &1885956747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28398,6 +28434,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &2055815531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29304,6 +29341,7 @@ MonoBehaviour:
   fadeImageLeft: {fileID: 1606127197}
   fadeImageRight: {fileID: 253528706}
   Loading: {fileID: 1419237580}
+  Am: {fileID: 0}
 --- !u!114 &2101941889
 MonoBehaviour:
   m_ObjectHideFlags: 0

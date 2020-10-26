@@ -62,7 +62,7 @@ public class MenuUI : MonoBehaviour
 
     // Bools
     public bool isLS = false;
-    int recentLevel;
+    public int recentLevel;
 
     [Header("Fade Images")]
     public Image fadeImageLeft;
@@ -75,15 +75,24 @@ public class MenuUI : MonoBehaviour
     public RectTransform Hearts;
     public LifeSystem LifeSystem;
 
+    [Header("Audio")]
+    public AudioManager_V2 Am;
+    public int volume;
+    public GameObject Red;
+    public GameObject Green;
+
+
     //public Ad_Manager ad;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("volume", 1);
+        //PlayerPrefs.SetInt("volume", 1);
+        volume = PlayerPrefs.GetInt("volume", 0);
         StartCoroutine(StartUI());
         recentLevel = PlayerPrefs.GetInt("levelAt", 3);
         LifeSystem = GameObject.Find("Life System").GetComponent<LifeSystem>();
+        Am = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
     }
 
     // Update is called once per frame
@@ -103,6 +112,15 @@ public class MenuUI : MonoBehaviour
             //LS_BG.DOFade(0, 1);
             //Settings_BG.DOFade(0, 1);
             //Credits_BG.DOFade(0, 1);
+        }
+
+        if(volume == 0)
+        {
+
+        }
+        else if(volume == 1)
+        {
+
         }
     }
 
@@ -270,12 +288,14 @@ public class MenuUI : MonoBehaviour
     public void Mute()
     {
         AudioListener.volume = 0f;
+        PlayerPrefs.SetInt("volume", 0);
         //ad.isMute = true;
     }
 
     public void unMute()
     {
         AudioListener.volume = 1f;
+        PlayerPrefs.SetInt("volume", 1);
         //ad.isMute = true;
     }
 
@@ -317,6 +337,7 @@ public class MenuUI : MonoBehaviour
 
     IEnumerator FadeImage()
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(.3f);
         fadeImageLeft.transform.DOLocalMoveX(-120.69f, 1f);
         fadeImageRight.transform.DOLocalMoveX(120.69f, 1f);

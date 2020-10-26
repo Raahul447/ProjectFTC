@@ -13,10 +13,13 @@ public class MainMenu : MonoBehaviour
     public Image fadeImageLeft, fadeImageRight;
     public TextMeshProUGUI Loading;
 
+    public AudioManager_V2 Am;
+
     // Start is called before the first frame update
     void Start()
     {
         //Menu.DOAnchorPos(new Vector2(0, 334.9f), 0.25f);
+        Am = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator FadeNextLevel()
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);
@@ -85,6 +89,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator FadeRetry()
     {
+        Am.Main.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);

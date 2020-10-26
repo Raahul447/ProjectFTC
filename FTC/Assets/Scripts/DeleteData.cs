@@ -23,7 +23,7 @@ public class DeleteData : MonoBehaviour
     public void DeletePrefs()
     {
         PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("levelAt", 2);
+        PlayerPrefs.SetInt("levelAt", 3);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

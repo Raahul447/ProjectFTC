@@ -37,6 +37,7 @@ public class PauseMenu_New : MonoBehaviour
 
     public Image audioLogo;
     public int volume;
+    public AudioManager_V2 Am;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class PauseMenu_New : MonoBehaviour
         ppv.profile.TryGetSettings(out Cg);
         ppv.profile.TryGetSettings(out dof);
         Click = this.gameObject.GetComponent<AudioSource>();
+        Am = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
     }
 
     // Update is called once per frame
@@ -98,11 +100,6 @@ public class PauseMenu_New : MonoBehaviour
             PauseMask.transform.DOLocalMoveY(2, 0.4f);
             Ad.HideBannerAd();
         }
-
-        if (!isPaused)
-        {
-            Ad.HideBannerAd();
-        }
     }
 
     public void Exit()
@@ -124,6 +121,7 @@ public class PauseMenu_New : MonoBehaviour
 
     public void YesButton()
     {
+        Am.Main.DOFade(0, 1);
         Click.Play();
         Ad.HideBannerAd();
         StartCoroutine(FadeStart());
@@ -144,6 +142,8 @@ public class PauseMenu_New : MonoBehaviour
             lifeSystem.GetComponent<LifeSystem>().lives--;
             return;
         }
+        Ad.HideBannerAd();
+        Am.Main.DOFade(0, 1);
     }
 
     public void RetryButton()
@@ -163,6 +163,7 @@ public class PauseMenu_New : MonoBehaviour
         Cg.saturation.value = 0;
         isPaused = false;
         Ad.HideBannerAd();
+        
     }
 
     IEnumerator FadeStart()
