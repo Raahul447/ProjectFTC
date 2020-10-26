@@ -139,7 +139,8 @@ public class ScoreEntrance : MonoBehaviour
 
     public void HomeButton()
     {
-        SceneManager.LoadScene("Main_Menu_V2");
+        //SceneManager.LoadScene("Main_Menu_V2");
+        StartCoroutine(FadeHome());
     }
 
     public void RetryButton()
@@ -184,7 +185,20 @@ public class ScoreEntrance : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
         fadeImageRight.transform.DOLocalMoveX(278, 1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator FadeHome()
+    {
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
+        fadeImageRight.transform.DOLocalMoveX(278, 1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Main_Menu_V2");
     }
 }

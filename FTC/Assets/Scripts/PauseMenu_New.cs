@@ -36,6 +36,7 @@ public class PauseMenu_New : MonoBehaviour
     public bool isMute = false;
 
     public Image audioLogo;
+    public int volume;
 
     // Start is called before the first frame update
     void Start()
@@ -70,13 +71,16 @@ public class PauseMenu_New : MonoBehaviour
         isMute = !isMute;
         if (isMute)
         {
+            PlayerPrefs.SetInt("volume", 0);
             AudioListener.volume = 0;
         }
         else
         {
+            PlayerPrefs.SetInt("volume", 1);
             AudioListener.volume = 1;
+
         }
-        adButton();
+        //adButton();
     }
 
     public void Pause()
@@ -94,6 +98,11 @@ public class PauseMenu_New : MonoBehaviour
             PauseMask.transform.DOLocalMoveY(2, 0.4f);
             Ad.HideBannerAd();
         }
+
+        if (!isPaused)
+        {
+            Ad.HideBannerAd();
+        }
     }
 
     public void Exit()
@@ -109,6 +118,7 @@ public class PauseMenu_New : MonoBehaviour
         PauseMask.transform.DOLocalMoveY(2, 0.4f);
         ExitObj.transform.DOLocalMoveY(-38, 0.5f);
         isPaused = false;
+        Ad.HideBannerAd();
         ExitObj.SetActive(false);
     }
 
@@ -121,7 +131,7 @@ public class PauseMenu_New : MonoBehaviour
 
     public void adButton()
     {
-        Ad.isMute = true;
+        //Ad.isMute = true;
     }
 
     public void Retry()
@@ -152,6 +162,7 @@ public class PauseMenu_New : MonoBehaviour
         RetryObj.SetActive(false);
         Cg.saturation.value = 0;
         isPaused = false;
+        Ad.HideBannerAd();
     }
 
     IEnumerator FadeStart()

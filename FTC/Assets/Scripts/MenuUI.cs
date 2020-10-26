@@ -75,9 +75,12 @@ public class MenuUI : MonoBehaviour
     public RectTransform Hearts;
     public LifeSystem LifeSystem;
 
+    //public Ad_Manager ad;
+
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("volume", 1);
         StartCoroutine(StartUI());
         recentLevel = PlayerPrefs.GetInt("levelAt", 3);
         LifeSystem = GameObject.Find("Life System").GetComponent<LifeSystem>();
@@ -267,11 +270,13 @@ public class MenuUI : MonoBehaviour
     public void Mute()
     {
         AudioListener.volume = 0f;
+        //ad.isMute = true;
     }
 
     public void unMute()
     {
         AudioListener.volume = 1f;
+        //ad.isMute = true;
     }
 
     IEnumerator SS()

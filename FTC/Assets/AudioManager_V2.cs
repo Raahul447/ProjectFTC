@@ -17,24 +17,41 @@ public class AudioManager_V2 : MonoBehaviour
     public AudioClip LavaTheme;
 
     public string levels;
-
-    
+    public int volume;
 
     // Start is called before the first frame update
     void Start()
     {
+        volume = PlayerPrefs.GetInt("volume", 1);
         MainTheme = (AudioClip)Resources.Load("Sounds/Tumble Theme");
         DesertTheme = (AudioClip)Resources.Load("Sounds/Desert_Theme");
         MountainTheme = (AudioClip)Resources.Load("Sounds/Mountain_Theme");
         SnowTheme = (AudioClip)Resources.Load("Sounds/Snow_Theme");
         LavaTheme = (AudioClip)Resources.Load("Sounds/Lava_ThemeTumble_The_Game (2)");
         LevelSong();
+        volume = PlayerPrefs.GetInt("volume", 1);
+        if (volume == 1)
+        {
+            AudioListener.volume = 1f;
+        }
+        else if (volume == 0)
+        {
+            AudioListener.volume = 0f;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //volume = PlayerPrefs.GetInt("volume", 1);
+        //if (volume == 1)
+        //{
+        //    AudioListener.volume = 1f;
+        //}
+        //else if(volume == 0)
+        //{
+        //    AudioListener.volume = 0f;
+        //}
     }
 
     public void LevelSong()

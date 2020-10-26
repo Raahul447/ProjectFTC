@@ -3489,6 +3489,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 640a1c61805b1fc4aa9448fd86793837, type: 3}
+--- !u!114 &568028717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9097765302522990039, guid: 640a1c61805b1fc4aa9448fd86793837,
+    type: 3}
+  m_PrefabInstance: {fileID: 568028716}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2086a63f5584cea4ebdbe54b4e5c5618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &578355898
 GameObject:
   m_ObjectHideFlags: 0
@@ -13135,7 +13147,7 @@ MonoBehaviour:
   y_Value: -13.556
   Player: {fileID: 1795219038}
   spawn_Timer: 1.4
-  MV: {fileID: 1795219039}
+  MV: {fileID: 0}
 --- !u!1001 &1760512244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13983,6 +13995,7 @@ MonoBehaviour:
   SnowTheme: {fileID: 0}
   LavaTheme: {fileID: 0}
   levels: 1to5
+  volume: 0
 --- !u!82 &1841933497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16349,6 +16362,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1199631153604356322, guid: 9d8c0a718fcecfb4fba789a0857745c8,
+        type: 3}
+      propertyPath: Am
+      value: 
+      objectReference: {fileID: 568028717}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d8c0a718fcecfb4fba789a0857745c8, type: 3}
 --- !u!1001 &2338348097946041647

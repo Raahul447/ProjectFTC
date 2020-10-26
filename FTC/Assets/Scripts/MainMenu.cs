@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class MainMenu : MonoBehaviour
 {
 
     public RectTransform Menu, LevelSelect, Settings;
+    public Image fadeImageLeft, fadeImageRight;
+    public TextMeshProUGUI Loading;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +32,15 @@ public class MainMenu : MonoBehaviour
 
     public void RestartLevel()
     {
-        Scene loadedLevel = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadedLevel.buildIndex);
+        //Scene loadedLevel = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene(loadedLevel.buildIndex);
+        StartCoroutine(FadeRetry());
     }
 
     public void ReturntoMenu()
     {
-        SceneManager.LoadScene("Main_Menu_V2");
+        StartCoroutine(FadeNextLevel());
+        //SceneManager.LoadScene("Main_Menu_V2");
     }
 
     public void GTMain()
@@ -65,5 +70,28 @@ public class MainMenu : MonoBehaviour
     {
         Settings.DOAnchorPos(new Vector2(-2000, 194), 0.25f);
         Menu.DOAnchorPos(new Vector2(0, 194), 0.25f);
+    }
+
+    IEnumerator FadeNextLevel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
+        fadeImageRight.transform.DOLocalMoveX(278, 1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync("Main_Menu_V2");
+    }
+
+    IEnumerator FadeRetry()
+    {
+        yield return new WaitForSeconds(0.3f);
+        fadeImageLeft.transform.DOLocalMoveX(-278, 1f);
+        fadeImageRight.transform.DOLocalMoveX(278, 1f);
+        yield return new WaitForSeconds(0.5f);
+        Loading.DOFade(1, 1);
+        yield return new WaitForSeconds(1);
+        Scene loadedLevel = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadedLevel.buildIndex);
     }
 }

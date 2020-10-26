@@ -17,7 +17,8 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
 
     public GameObject lifeSystem;
 
-    public bool isMute = false;
+    //public bool isMute = false;
+    public AudioManager_V2 Am;
 
     private void Start()
     {
@@ -79,6 +80,7 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsDidStart(string placementId)
     {
         //throw new System.NotImplementedException();
+        //PlayerPrefs.SetInt("volume", 0);
         AudioListener.volume = 0f;
     }
 
@@ -91,13 +93,13 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
             case ShowResult.Skipped:
                 break;
             case ShowResult.Finished:
-                if(placementId == interstitialAd)
+                if (placementId == interstitialAd)
                 {
-                    if (isMute)
+                    if (Am.volume == 0)
                     {
                         AudioListener.volume = 0f;
                     }
-                    else
+                    else if (Am.volume == 1)
                     {
                         AudioListener.volume = 1f;
                     }
@@ -109,14 +111,6 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
                     Scene loadedLevel = SceneManager.GetActiveScene();
                     SceneManager.LoadScene(loadedLevel.buildIndex);
                     //Debug.Log("watched");
-                    if (isMute)
-                    {
-                        AudioListener.volume = 0f;
-                    }
-                    else
-                    {
-                        AudioListener.volume = 1f;
-                    }
                 }
                 break;
         }
