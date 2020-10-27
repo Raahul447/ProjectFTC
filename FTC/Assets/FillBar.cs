@@ -21,6 +21,6 @@ public class FillBar : MonoBehaviour
     void Update()
     {
         variable = (float)lifesystem.timerForLife;
-        fillbar.fillAmount = variable/30;
+        fillbar.fillAmount = variable/60;
     }
 }

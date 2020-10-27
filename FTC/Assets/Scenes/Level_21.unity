@@ -5069,6 +5069,11 @@ PrefabInstance:
       propertyPath: maxLives
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7176833357446346782, guid: c4144fa9c20f92946a3d13c840a49aaa,
+        type: 3}
+      propertyPath: lifeReplenishTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5131274568486086562, guid: c4144fa9c20f92946a3d13c840a49aaa,
         type: 3}
       propertyPath: m_Name

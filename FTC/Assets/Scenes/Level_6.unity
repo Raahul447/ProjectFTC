@@ -5309,6 +5309,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7176833357446346782, guid: c4144fa9c20f92946a3d13c840a49aaa,
+        type: 3}
+      propertyPath: lifeReplenishTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 460772599, guid: c4144fa9c20f92946a3d13c840a49aaa, type: 3}
       propertyPath: m_Volume
       value: 0.1

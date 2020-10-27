@@ -82,6 +82,9 @@ public class MenuUI : MonoBehaviour
     public GameObject Green;
 
 
+    [Header("Refill")]
+    public GameObject refill;
+
     //public Ad_Manager ad;
 
     // Start is called before the first frame update
@@ -241,8 +244,15 @@ public class MenuUI : MonoBehaviour
 
     public void DesertSub()
     {
-        StartCoroutine(DS());
-        Main.GetComponent<Renderer>().material = D; 
+        if (LifeSystem.lives > 0)
+        {
+            StartCoroutine(DS());
+            Main.GetComponent<Renderer>().material = D;
+        }
+        else
+        {
+            refill.SetActive(true);
+        }
     }
 
     IEnumerator loadplay()
@@ -264,8 +274,15 @@ public class MenuUI : MonoBehaviour
 
     public void MtnSub()
     {
-        StartCoroutine(MS());
-        Main.GetComponent<Renderer>().material = M;
+        if (LifeSystem.lives > 0)
+        {
+            StartCoroutine(MS());
+            Main.GetComponent<Renderer>().material = M;
+        }
+        else
+        {
+            refill.SetActive(true);
+        }
     }
 
     IEnumerator MS()
@@ -281,8 +298,15 @@ public class MenuUI : MonoBehaviour
 
     public void SnowSub()
     {
-        StartCoroutine(SS());
-        Main.GetComponent<Renderer>().material = S;
+        if (LifeSystem.lives > 0)
+        {
+            StartCoroutine(SS());
+            Main.GetComponent<Renderer>().material = S;
+        }
+        else
+        {
+            refill.SetActive(true);
+        }
     }
 
     public void Mute()
@@ -312,8 +336,16 @@ public class MenuUI : MonoBehaviour
 
     public void LavaSub()
     {
-        StartCoroutine(LS());
-        Main.GetComponent<Renderer>().material = L;
+        if (LifeSystem.lives > 0)
+        {
+            StartCoroutine(LS());
+            Main.GetComponent<Renderer>().material = L;
+        }
+        else
+        {
+            refill.SetActive(true);
+        }
+
     }
 
     IEnumerator LS()
@@ -332,6 +364,10 @@ public class MenuUI : MonoBehaviour
         if(LifeSystem.lives > 0)
         {
             StartCoroutine(FadeImage());
+        }
+        else
+        {
+            refill.SetActive(true);
         }
     }
 

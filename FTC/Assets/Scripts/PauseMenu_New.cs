@@ -39,6 +39,8 @@ public class PauseMenu_New : MonoBehaviour
     public int volume;
     public AudioManager_V2 Am;
 
+    public Movement mv;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,7 @@ public class PauseMenu_New : MonoBehaviour
         ppv.profile.TryGetSettings(out dof);
         Click = this.gameObject.GetComponent<AudioSource>();
         Am = GameObject.Find("Audio Manager").GetComponent<AudioManager_V2>();
+        mv = GameObject.Find("Player").GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -93,12 +96,14 @@ public class PauseMenu_New : MonoBehaviour
             PauseMask.transform.DOLocalMoveY(-100, 0.4f);
             Click.Play();
             Ad.PlayBannerAd();
+            //mv.enabled = false;
         }
         else
         {
             Click.Play();
             PauseMask.transform.DOLocalMoveY(2, 0.4f);
             Ad.HideBannerAd();
+            //mv.enabled = true;
         }
     }
 
@@ -107,6 +112,7 @@ public class PauseMenu_New : MonoBehaviour
         //Click.Play();
         ExitObj.SetActive(true);
         ExitObj.transform.DOLocalMoveY(10, 0.5f);
+        mv.enabled = false;
     }
 
     public void NoButton()
@@ -117,6 +123,7 @@ public class PauseMenu_New : MonoBehaviour
         isPaused = false;
         Ad.HideBannerAd();
         ExitObj.SetActive(false);
+        mv.enabled = true;
     }
 
     public void YesButton()
@@ -152,6 +159,8 @@ public class PauseMenu_New : MonoBehaviour
         RetryObj.SetActive(true);
         RetryObj.transform.DOLocalMoveY(10, 0.5f);
         Cg.saturation.value = -100;
+        Ad.HideBannerAd();
+        mv.enabled = false;
     }
 
     public void RetryNo()
@@ -163,7 +172,7 @@ public class PauseMenu_New : MonoBehaviour
         Cg.saturation.value = 0;
         isPaused = false;
         Ad.HideBannerAd();
-        
+        mv.enabled = true;
     }
 
     IEnumerator FadeStart()
