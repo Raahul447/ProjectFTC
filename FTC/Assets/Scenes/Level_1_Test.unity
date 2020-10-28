@@ -7676,6 +7676,11 @@ PrefabInstance:
       propertyPath: Ad
       value: 
       objectReference: {fileID: 1215344777}
+    - target: {fileID: 8356122462164273279, guid: 21e84668198a81f4faf4642d51c50e73,
+        type: 3}
+      propertyPath: refill
+      value: 
+      objectReference: {fileID: 1675619480}
     - target: {fileID: 8356122462164273278, guid: 21e84668198a81f4faf4642d51c50e73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8263,6 +8268,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7965790890949138817, guid: 5bebbed1ecd619c488462f1e1b9bf60c,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 900445977}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bebbed1ecd619c488462f1e1b9bf60c, type: 3}
 --- !u!1 &1675619480 stripped
@@ -10124,7 +10134,12 @@ PrefabInstance:
     - target: {fileID: 7176833357446346782, guid: c4144fa9c20f92946a3d13c840a49aaa,
         type: 3}
       propertyPath: lifeReplenishTime
-      value: 60
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176833357446346782, guid: c4144fa9c20f92946a3d13c840a49aaa,
+        type: 3}
+      propertyPath: currentLives
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5131274568486086562, guid: c4144fa9c20f92946a3d13c840a49aaa,
         type: 3}

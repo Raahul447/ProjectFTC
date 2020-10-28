@@ -40,11 +40,14 @@ public class PauseMenu_New : MonoBehaviour
     public AudioManager_V2 Am;
 
     public Movement mv;
+    public LifeSystem Ls;
+    public GameObject refill;
 
     // Start is called before the first frame update
     void Start()
     {
         lifeSystem = GameObject.FindGameObjectWithTag("LifeSystem");
+        Ls = GameObject.FindGameObjectWithTag("LifeSystem").GetComponent<LifeSystem>();
         ppv.profile.TryGetSettings(out Cg);
         ppv.profile.TryGetSettings(out dof);
         Click = this.gameObject.GetComponent<AudioSource>();
@@ -142,15 +145,24 @@ public class PauseMenu_New : MonoBehaviour
     public void Retry()
     {
         //Click.Play();
-        Scene loadedLevel = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadedLevel.buildIndex);
-        if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
-        {
-            lifeSystem.GetComponent<LifeSystem>().lives--;
-            return;
-        }
         Ad.HideBannerAd();
         Am.Main.DOFade(0, 1);
+        if (Ls.currentLives == 1)
+        {
+            lifeSystem.GetComponent<LifeSystem>().lives--;
+            refill.SetActive(true);
+            return;
+        }
+        else
+        {
+            Scene loadedLevel = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(loadedLevel.buildIndex);
+            if (lifeSystem.GetComponent<LifeSystem>().lives != 0)
+            {
+                lifeSystem.GetComponent<LifeSystem>().lives--;
+                return;
+            }
+        }
     }
 
     public void RetryButton()
