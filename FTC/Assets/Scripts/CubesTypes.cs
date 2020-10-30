@@ -52,9 +52,12 @@ public class CubesTypes : MonoBehaviour
     public AudioClip Portals;
     public AudioClip Final;
 
+    public Ad_Manager Ads;
+
     // Start is called before the first frame update
     void Start()
     {
+        Ads = GameObject.Find("AdManager").GetComponent<Ad_Manager>();
         Ct = GetComponent<CubesTypes>();
         ppv.profile.TryGetSettings(out dof);
         rendy = GetComponent<Renderer>();
@@ -104,6 +107,7 @@ public class CubesTypes : MonoBehaviour
             }
             else if (other.gameObject.tag == "Player" && this.gameObject.tag == "End Cube")
             {
+                Ads.HideBannerAd();
                 StartCoroutine(NextLevelLoad());
                 BG_AS.endFade();
                 //AS.clip = Final;

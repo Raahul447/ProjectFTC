@@ -29,7 +29,7 @@ public class PauseMenu_New : MonoBehaviour
     public TextMeshProUGUI loadingText;
 
     [Header("Ads")]
-    public Ad_Manager Ad;
+    //public Ad_Manager Ad;
 
     public AudioSource Click;
 
@@ -98,14 +98,14 @@ public class PauseMenu_New : MonoBehaviour
         {
             PauseMask.transform.DOLocalMoveY(-100, 0.4f);
             Click.Play();
-            Ad.PlayBannerAd();
+            //Ad.PlayBannerAd();
             //mv.enabled = false;
         }
         else
         {
             Click.Play();
             PauseMask.transform.DOLocalMoveY(2, 0.4f);
-            Ad.HideBannerAd();
+            //Ad.HideBannerAd();
             //mv.enabled = true;
         }
     }
@@ -124,7 +124,7 @@ public class PauseMenu_New : MonoBehaviour
         PauseMask.transform.DOLocalMoveY(2, 0.4f);
         ExitObj.transform.DOLocalMoveY(-38, 0.5f);
         isPaused = false;
-        Ad.HideBannerAd();
+        //Ad.HideBannerAd();
         ExitObj.SetActive(false);
         mv.enabled = true;
     }
@@ -133,7 +133,7 @@ public class PauseMenu_New : MonoBehaviour
     {
         Am.Main.DOFade(0, 1);
         Click.Play();
-        Ad.HideBannerAd();
+        //Ad.HideBannerAd();
         StartCoroutine(FadeStart());
     }
 
@@ -145,7 +145,7 @@ public class PauseMenu_New : MonoBehaviour
     public void Retry()
     {
         //Click.Play();
-        Ad.HideBannerAd();
+        //Ad.HideBannerAd();
         Am.Main.DOFade(0, 1);
         if (Ls.currentLives == 1)
         {
@@ -171,7 +171,7 @@ public class PauseMenu_New : MonoBehaviour
         RetryObj.SetActive(true);
         RetryObj.transform.DOLocalMoveY(10, 0.5f);
         Cg.saturation.value = -100;
-        Ad.HideBannerAd();
+        //Ad.HideBannerAd();
         mv.enabled = false;
     }
 
@@ -183,7 +183,7 @@ public class PauseMenu_New : MonoBehaviour
         RetryObj.SetActive(false);
         Cg.saturation.value = 0;
         isPaused = false;
-        Ad.HideBannerAd();
+        //Ad.HideBannerAd();
         mv.enabled = true;
     }
 

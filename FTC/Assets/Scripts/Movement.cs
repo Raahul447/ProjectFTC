@@ -170,7 +170,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
-                Am.HideBannerAd();
+                //Am.HideBannerAd();
                 //pSound.Play();
             }
         }
@@ -185,7 +185,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
-                Am.HideBannerAd();
+                //Am.HideBannerAd();
                 //pSound.Play();
             }
         }
@@ -200,7 +200,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
-                Am.HideBannerAd();
+                //Am.HideBannerAd();
                 //pSound.Play();
             }
         }
@@ -215,7 +215,7 @@ public class Movement : MonoBehaviour
                 _Moves += 1;
                 PN.PauseMask.transform.DOLocalMoveY(2, 0.4f);
                 PN.isPaused = false;
-                Am.HideBannerAd();
+                //Am.HideBannerAd();
                 //pSound.Play();
             }
         }

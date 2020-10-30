@@ -31,11 +31,12 @@ public class LevelEntrance : MonoBehaviour
     public GameObject GameUI;
 
     public GameObject LE;
-
+    public Ad_Manager ads;
 
     // Start is called before the first frame update
     void Start()
     {
+        ads = GameObject.Find("AdManager").GetComponent<Ad_Manager>();
         StartCoroutine(StartLevel());
         textName.text = lName;
         //Debug.Log(scene.buildIndex);
@@ -75,6 +76,7 @@ public class LevelEntrance : MonoBehaviour
         lbot.DOFade(0, 1);
         yield return new WaitForSeconds(0.3f);
         GameUI.SetActive(true);
+        ads.PlayBannerAd();
         yield return new WaitForSeconds(0.5f);
         LE.SetActive(false);
     }

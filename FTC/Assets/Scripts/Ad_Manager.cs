@@ -110,7 +110,7 @@ public class Ad_Manager : MonoBehaviour, IUnityAdsListener
                     lifeSystem.GetComponent<LifeSystem>().timerForLife = 0f;
                     Scene loadedLevel = SceneManager.GetActiveScene();
                     SceneManager.LoadScene(loadedLevel.buildIndex);
-                    //Debug.Log("watched");
+                    ////Debug.Log("watched");
                 }
                 break;
         }
