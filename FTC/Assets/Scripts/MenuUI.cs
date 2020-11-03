@@ -103,14 +103,14 @@ public class MenuUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && isLS)
         {
-            Arrow.DOFade(0, 0.5f);
-            ArrowObj.DOAnchorPos(new Vector2(38, 272), 1f);
-            TumbleText.DOAnchorPos(new Vector2(-10.3f, -35), 1f);
-            PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);
-            LevelSelectObj.DOAnchorPos(new Vector2(-1.5f, 35), 1);
-            BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
-            Underline.DOAnchorPos(new Vector2(-144.5f, 70f), 0.5f);
-
+            //Arrow.DOFade(0, 0.5f);
+            //ArrowObj.DOAnchorPos(new Vector2(38, 272), 1f);
+            //TumbleText.DOAnchorPos(new Vector2(-10.3f, -35), 1f);
+            //PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);
+            //LevelSelectObj.DOAnchorPos(new Vector2(-1.5f, 35), 1);
+            //BottomTab.DOAnchorPos(new Vector2(0, 61), 0.5f);
+            //Underline.DOAnchorPos(new Vector2(-144.5f, 70f), 0.5f);
+            Application.Quit();
             //Play_BG.DOFade(1, 1);
             //LS_BG.DOFade(0, 1);
             //Settings_BG.DOFade(0, 1);
@@ -132,7 +132,7 @@ public class MenuUI : MonoBehaviour
         LineObj.DOFade(1, 3);
         LineObject.DOScaleX(0.9998868f, 2);
         yield return new WaitForSeconds(0.8f);
-        TumbleText.DOAnchorPos(new Vector2(-10.3f, -35), 1f);
+        TumbleText.DOAnchorPos(new Vector2(-1f, -35), 1f);
         Hearts.DOAnchorPos(new Vector2(-54.60001f, -27.60001f),1);
         yield return new WaitForSeconds(1);
         PlayText.DOAnchorPos(new Vector2(-10.3f, -35), 0.5f);

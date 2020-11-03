@@ -58,11 +58,11 @@ public class PauseMenu_New : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            ExitObj.SetActive(true);
-            ExitObj.transform.DOLocalMoveY(10, 0.5f);
-        }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    ExitObj.SetActive(true);
+        //    ExitObj.transform.DOLocalMoveY(10, 0.5f);
+        //}
 
         if(AudioListener.volume == 0)
         {

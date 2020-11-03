@@ -87,7 +87,7 @@ public class SequencePillar : MonoBehaviour
                     Col6.transform.DOMoveY(C6Y, time);
                 }
             }
-            gameObject.GetComponent<BoxCollider>().enabled = false;
+            //gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
